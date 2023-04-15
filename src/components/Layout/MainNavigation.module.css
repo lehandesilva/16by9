@@ -2,6 +2,13 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 0.75rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  width: 10vw;
 }
 
 ul {
@@ -16,6 +23,7 @@ li {
 a {
   color: rgb(207, 207, 207);
   text-decoration: none;
+  font-size: 2rem;
 }
 
 a:hover,
