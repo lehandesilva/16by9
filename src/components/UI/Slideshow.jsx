@@ -1,31 +1,11 @@
-import shazampic from "../../assests/shazamw1280.jpg";
-import avatar from "../../assests/avatarw1280.jpg";
-import creed from "../../assests/creed3w1280.jpg";
-import johnwick from "../../assests/johnWick4w1280.jpg";
-import mario from "../../assests/superMariow1280.jpg";
-
+import { useState } from "react";
 import classes from "./Slideshow.module.css";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const MOCKDATA = [
   {
-    adult: false,
-    backdrop_path: "/wybmSmviUXxlBmX44gtpow5Y9TB.jpg",
-    id: 594767,
-    title: "Shazam! Fury of the Gods",
-    original_language: "en",
-    original_title: "Shazam! Fury of the Gods",
-    overview:
-      'Billy Batson and his foster siblings, who transform into superheroes by saying "Shazam!", are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.',
-    poster_path: "/A3ZbZsmsvNGdprRi2lKgGEeVLEH.jpg",
-    media_type: "movie",
-    genre_ids: [28, 35, 14],
-    popularity: 4162.423,
-    release_date: "2023-03-15",
-    video: false,
-    vote_average: 6.962,
-    vote_count: 713,
-  },
-  {
+    key: 0,
     adult: false,
     backdrop_path: "/ytdebEE0ndYLSTEctPgh8e0vaBs.jpg",
     id: 76600,
@@ -44,6 +24,7 @@ const MOCKDATA = [
     vote_count: 6934,
   },
   {
+    key: 1,
     adult: false,
     backdrop_path: "/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg",
     id: 603692,
@@ -62,6 +43,7 @@ const MOCKDATA = [
     vote_count: 961,
   },
   {
+    key: 2,
     adult: false,
     backdrop_path: "/5i6SjyDbDWqyun8klUuCxrlFbyw.jpg",
     id: 677179,
@@ -80,6 +62,7 @@ const MOCKDATA = [
     vote_count: 919,
   },
   {
+    key: 3,
     adult: false,
     backdrop_path: "/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg",
     id: 502356,
@@ -100,16 +83,56 @@ const MOCKDATA = [
 ];
 
 const Slideshow = () => {
+  const [index, setIndex] = useState(0);
+  const timeoutRef = useRef(null);
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  const clickHandler = (id) => {
+    setIndex(id);
+  };
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setIndex((prevIndex) =>
+          prevIndex === MOCKDATA.length - 1 ? 0 : prevIndex + 1
+        ),
+      5000
+    );
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
+
   return (
     <>
-      <img src={shazampic} />
-      <p className={classes.year}>{MOCKDATA[0].release_date}</p>
-      <h1 className={classes.title}>{MOCKDATA[0].title}</h1>
-      <p className={classes.overview}>{MOCKDATA[0].overview}</p>
-      <p className={classes.genre}></p>
-      <p className={classes.genre}></p>
-      <p className={classes.genre}></p>
-      <p className={classes.rating}>{MOCKDATA[0].vote_average}</p>
+      <div className={classes.slideshow}>
+        <div
+          className={classes.slideshowSlider}
+          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        >
+          {MOCKDATA.map((item) => (
+            <div key={item.key} className={classes.slide}>
+              <img
+                src={"https://image.tmdb.org/t/p/original" + item.backdrop_path}
+              />
+              <p className={classes.year}>{item.release_date}</p>
+              <h1 className={classes.title}>{item.title}</h1>
+              <p className={classes.overview}>{item.overview}</p>
+              <p className={classes.genre}></p>
+              <p className={classes.genre}></p>
+              <p className={classes.genre}></p>
+              <p className={classes.rating}>{item.vote_average}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };

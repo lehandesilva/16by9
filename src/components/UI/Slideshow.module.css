@@ -1,0 +1,19 @@
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: inline-block;
+  width: 100%;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
