@@ -16,8 +16,8 @@ const MainNavigation = () => {
           <ul>
             <li>
               <svg
-                width="20pt"
-                height="20pt"
+                width="30pt"
+                height="30pt"
                 version="1.1"
                 fill="white"
                 viewBox="0 0 700 700"

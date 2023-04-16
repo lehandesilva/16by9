@@ -2,31 +2,43 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 0.75rem;
+  width: 100%;
   position: absolute;
   top: 0;
-  width: 100%;
 }
 
 .logo {
   width: 10vw;
+  position: fixed;
 }
 
 ul {
-  padding: 0.75rem;
+  /* padding: 0.75rem; */
   display: flex;
+  padding: 1rem 7rem 0rem 0rem;
 }
 
 li {
-  padding: 0 0 0 5rem;
+  padding: 0 0 0 10rem;
 }
 
 a {
   color: rgb(207, 207, 207);
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 20px;
 }
 
 a:hover,
 a:active {
   color: rgb(255, 255, 255);
+}
+
+nav:hover {
+  background: rgb(4, 4, 26);
+  background: linear-gradient(
+    180deg,
+    rgba(4, 4, 26, 1) 0%,
+    rgba(4, 4, 26, 0.5130427170868348) 63%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
