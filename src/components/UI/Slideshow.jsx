@@ -84,55 +84,41 @@ const MOCKDATA = [
 
 const Slideshow = () => {
   const [index, setIndex] = useState(0);
-  const timeoutRef = useRef(null);
-
-  const resetTimeout = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  };
 
   const clickHandler = (id) => {
     setIndex(id);
   };
 
-  useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === MOCKDATA.length - 1 ? 0 : prevIndex + 1
-        ),
-      5000
-    );
-    return () => {
-      resetTimeout();
-    };
-  }, [index]);
+  // useEffect(() => {
+  //   setTimeout(
+  //     () =>
+  //       setIndex((prevIndex) =>
+  //         prevIndex === MOCKDATA.length - 1 ? 0 : prevIndex + 1
+  //       ),
+  //     10000
+  //   );
+  //   return () => {};
+  // }, [index]);
 
   return (
     <>
-      <div className={classes.slideshow}>
-        <div
-          className={classes.slideshowSlider}
-          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-        >
-          {MOCKDATA.map((item) => (
-            <div key={item.key} className={classes.slide}>
-              <img
-                src={"https://image.tmdb.org/t/p/original" + item.backdrop_path}
-              />
-              <p className={classes.year}>{item.release_date}</p>
-              <h1 className={classes.title}>{item.title}</h1>
-              <p className={classes.overview}>{item.overview}</p>
-              <p className={classes.genre}></p>
-              <p className={classes.genre}></p>
-              <p className={classes.genre}></p>
-              <p className={classes.rating}>{item.vote_average}</p>
-            </div>
-          ))}
+      {MOCKDATA.map((item) => (
+        <div key={item.key} className={classes.slide}>
+          <img
+            className={classes.heroImg}
+            src={"https://image.tmdb.org/t/p/w1280" + item.backdrop_path}
+          />
+          <div className={classes.movieInfo}>
+            <p className={classes.year}>{item.release_date.slice(0, 4)}</p>
+            <h1 className={classes.title}>{item.title}</h1>
+            <p className={classes.overview}>{item.overview}</p>
+            <p className={classes.genre}></p>
+            <p className={classes.genre}></p>
+            <p className={classes.genre}></p>
+            <p className={classes.rating}>{item.vote_average.toFixed(1)}</p>
+          </div>
         </div>
-      </div>
+      ))}
     </>
   );
 };

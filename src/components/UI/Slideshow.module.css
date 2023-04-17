@@ -1,18 +1,41 @@
-img {
-  width: 100vw;
+.slide {
+  width: 100%;
+  position: relative;
 }
 
-.slideshow {
+.heroImg {
+  width: 100%;
+  filter: brightness(70%);
   margin: 0 auto;
+}
+
+.movieInfo {
+  color: aliceblue;
+  top: 40%;
+  z-index: 3;
+  width: 75%;
+  padding: 0 0 0 7rem;
+  position: absolute;
   overflow: hidden;
 }
 
-.slide {
-  display: inline-block;
-  width: 100%;
+.year {
+  font-size: 2rem;
 }
 
-.slideshowSlider {
-  white-space: nowrap;
-  transition: ease 1000ms;
+.title {
+  font-size: 8rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.overview {
+  font-size: 1.5rem;
+  text-overflow: ellipsis;
+}
+
+.genre {
+}
+
+.rating {
 }
