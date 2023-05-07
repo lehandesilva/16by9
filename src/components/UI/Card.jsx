@@ -6,7 +6,9 @@ const Card = (props) => {
     <div className={classes.Card}>
       <Link
         to={
-          props.type === "movie" ? `/Movie/${props.id}` : `/Tvshow/${props.id}`
+          props.type === "movie"
+            ? `/Movies/${props.id}`
+            : `/Tvshows/${props.id}`
         }
       >
         <img
