@@ -2,6 +2,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
 import Homepage from "./pages/Homepage";
+import Movies from "./pages/Movies";
+import Tvshows from "./pages/Tvshows";
+import TvshowDetailPage from "./pages/TvshowDetailPage";
+import MovieDetailPage from "./pages/MovieDetailPage";
+import MoviesRootLayout from "./pages/MoviesRootLayout";
+import TvshowsRootLayout from "./pages/TvshowsRootLayout";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +17,22 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
+      },
+      {
+        path: "Movies",
+        element: <MoviesRootLayout />,
+        children: [
+          { index: true, element: <Movies /> },
+          { path: ":MovieID", element: <MovieDetailPage /> },
+        ],
+      },
+      {
+        path: "Tvshows",
+        element: <TvshowsRootLayout />,
+        children: [
+          { index: true, element: <Tvshows /> },
+          { path: ":TvshowID", element: <TvshowDetailPage /> },
+        ],
       },
     ],
   },

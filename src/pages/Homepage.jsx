@@ -1,5 +1,5 @@
-import Slideshow from "../components/UI/Slideshow";
-import Trending from "../components/UI/Trending";
+import Slideshow from "../components/Sections/Slideshow";
+import Trending from "../components/Sections/Trending";
 
 const Homepage = () => {
   return (

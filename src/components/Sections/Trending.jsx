@@ -1,3 +1,5 @@
+import Card from "../UI/Card";
+import Grid from "../UI/Grid";
 import classes from "./Trending.module.css";
 
 const MOCKDATa = [
@@ -223,18 +225,17 @@ const Trending = () => {
   return (
     <>
       <h1>Trending</h1>
-      <div className={classes.gridContainer}>
+      <Grid>
         {MOCKDATa.map((item) => (
-          <div className={classes.Card}>
-            <img
-              className={classes.poster}
-              src={"https://image.tmdb.org/t/p/w342" + item.poster_path}
-            />
-            <p className={classes.name}>{item.title}</p>
-            <p className={classes.rating}>{item.vote_average.toFixed(1)}</p>
-          </div>
+          <Card
+            id={item.id}
+            type={item.media_type}
+            imgUrl={item.poster_path}
+            name={item.title ? item.title : item.name}
+            rating={item.vote_average.toFixed(1)}
+          />
         ))}
-      </div>
+      </Grid>
     </>
   );
 };

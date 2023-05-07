@@ -217,7 +217,7 @@ const Slideshow = () => {
         setIndex((prevIndex) =>
           prevIndex === MOCKDATA.length - 1 ? 0 : prevIndex + 1
         ),
-      8000
+      10000
     );
     return () => {};
   }, [index]);

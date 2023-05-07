@@ -39,7 +39,7 @@ const MainNavigation = () => {
             </li>
             <li>
               <NavLink
-                to="/movies"
+                to="/Movies"
                 className={({ isActive }) =>
                   isActive ? classes.active : undefined
                 }
@@ -49,7 +49,7 @@ const MainNavigation = () => {
             </li>
             <li>
               <NavLink
-                to="/tvshows"
+                to="/Tvshows"
                 className={({ isActive }) =>
                   isActive ? classes.active : undefined
                 }
