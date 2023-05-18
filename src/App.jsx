@@ -76,20 +76,19 @@ Tv Shows
   on the air - https://api.themoviedb.org/3/tv/on_the_air?api_key=<<api_key>>&language=en-US&page=1
   popular - https://api.themoviedb.org/3/tv/popular?api_key=<<api_key>>&language=en-US&page=1
   top rated - https://api.themoviedb.org/3/tv/top_rated?api_key=<<api_key>>&language=en-US&page=1
-*/
-//HOMEPAGE
-// Trending
-// Popular Movies
-// Popular Tv Shows
 
-// MOVIES SECTION
-// Discover
-// Popular
-// Top Rated
-// Upcoming
-
-// TV SHOWS
-// Discover
-// Popular
-// Top Rated
-// On the Air
+HOMEPAGE
+ Trending
+ Popular Movies
+ Popular Tv Show
+ MOVIES SECTION
+ Discover
+ Popular
+ Top Rated
+ Upcomin
+ TV SHOWS
+ Discover
+ Popular
+ Top Rated
+ On the Air
+ */

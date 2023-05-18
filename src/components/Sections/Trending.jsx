@@ -228,6 +228,7 @@ const Trending = () => {
       <Grid>
         {MOCKDATa.map((item) => (
           <Card
+            key={item.id}
             id={item.id}
             type={item.media_type}
             imgUrl={item.poster_path}

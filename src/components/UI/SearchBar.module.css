@@ -1,0 +1,32 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchIcon {
+  color: rgb(207, 207, 207);
+  font-size: 1.7rem;
+  transition: 0.5s ease-in;
+  position: absolute;
+}
+
+.searchBox:hover {
+  width: 20rem;
+  height: 2rem;
+  padding: 1.3rem;
+  border-radius: 1rem;
+  background-color: #04041a;
+  color: aliceblue;
+  outline: none;
+  border: none;
+  transition: 0.5s ease;
+}
+
+.searchBox .active {
+}
+
+.active .searchIcon {
+  transform: translate(210px, 2px) scale(0.8);
+  background-color: transparent;
+}

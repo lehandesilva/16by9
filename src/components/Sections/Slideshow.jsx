@@ -232,6 +232,7 @@ const Slideshow = () => {
           <div className={classes.slide}>
             {MOCKDATA.map((item) => (
               <img
+                key={item.id}
                 className={classes.heroImg}
                 src={"https://image.tmdb.org/t/p/original" + item.backdrop_path}
               />
