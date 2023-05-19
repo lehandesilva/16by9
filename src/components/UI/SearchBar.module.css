@@ -11,22 +11,18 @@
   position: absolute;
 }
 
-.searchBox:hover {
-  width: 20rem;
-  height: 2rem;
+.searchBox {
+  width: 50px;
+  height: 50px;
   padding: 1.3rem;
   border-radius: 1rem;
   background-color: #04041a;
   color: aliceblue;
   outline: none;
   border: none;
-  transition: 0.5s ease;
+  transition: 0.25s ease;
 }
 
-.searchBox .active {
-}
-
-.active .searchIcon {
-  transform: translate(210px, 2px) scale(0.8);
-  background-color: transparent;
+.active .searchBox {
+  width: 250px;
 }
