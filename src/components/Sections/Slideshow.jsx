@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import classes from "./Slideshow.module.css";
+import { AiOutlineStar } from "react-icons/ai";
 
 const MOCKDATA = [
   {
@@ -249,9 +250,12 @@ const Slideshow = () => {
         <p className={classes.genre}></p>
         <p className={classes.genre}></p>
         <p className={classes.genre}></p>
-        <p className={classes.rating}>
-          {MOCKDATA[index].vote_average.toFixed(1)}
-        </p>
+        <div className={classes.rating}>
+          <AiOutlineStar className={classes.star} />
+          <p className={classes.rate}>
+            {MOCKDATA[index].vote_average.toFixed(1)}
+          </p>
+        </div>
       </div>
     </>
   );

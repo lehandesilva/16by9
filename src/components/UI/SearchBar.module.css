@@ -60,3 +60,7 @@
 .searchBtn:hover {
   color: rgb(255, 255, 255);
 }
+
+.closeBtn:hover {
+  color: rgb(255, 0, 0);
+}

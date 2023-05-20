@@ -61,4 +61,13 @@
 
 .rating {
   padding: 2rem 0 0 0;
+  display: flex;
+}
+
+.star {
+  font-size: 1.5rem;
+}
+
+.rate {
+  padding: 0 0 0 1rem;
 }

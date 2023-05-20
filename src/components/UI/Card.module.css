@@ -23,6 +23,17 @@
 
 .rating {
   color: aliceblue;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 1.5rem;
+}
+
+.rate {
+  padding-left: 0.5rem;
+  font-size: 1rem;
 }
 
 .Card:hover {
