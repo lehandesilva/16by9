@@ -8,11 +8,9 @@ const SearchBar = () => {
 
   const searchBtnActiveHandler = (event) => {
     setSearchBtnState(true);
-    console.log("true");
   };
   const searchBtnInactiveHandler = (event) => {
     setSearchBtnState(false);
-    console.log("false");
   };
 
   return (
@@ -20,7 +18,9 @@ const SearchBar = () => {
       <div className={classes.search}>
         <input
           type="text"
+          placeholder={searchBtnState ? "Search..." : ""}
           className={`${classes.searchBox} ${searchBtnState && classes.active}`}
+          onBlur={searchBtnInactiveHandler}
         />
         <button
           className={`${classes.searchBtn} ${searchBtnState && classes.active}`}
