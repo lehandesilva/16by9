@@ -8,17 +8,19 @@ const MainNavigation = () => {
   return (
     <header>
       <nav>
-        <div className={classes.pageIcon}>
-          <NavLink to="/" end>
-            <img className={classes.logo} src={logo} alt="logo" />
-          </NavLink>
-        </div>
-        <div className={classes.navOptions}>
-          <ul>
+        <ul>
+          <div className={classes.logoAndSearch}>
             <li>
+              <NavLink to="/" end>
+                <img className={classes.logo} src={logo} alt="logo" />
+              </NavLink>
+            </li>
+            <li className={classes.searchBar}>
               <SearchBar />
             </li>
-            <li>
+          </div>
+          <div className={classes.navOptions}>
+            <li className={classes.navOption}>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -29,7 +31,7 @@ const MainNavigation = () => {
                 Home
               </NavLink>
             </li>
-            <li>
+            <li className={classes.navOption}>
               <NavLink
                 to="/Movies"
                 className={({ isActive }) =>
@@ -39,7 +41,7 @@ const MainNavigation = () => {
                 Movies
               </NavLink>
             </li>
-            <li>
+            <li className={classes.navOption}>
               <NavLink
                 to="/Tvshows"
                 className={({ isActive }) =>
@@ -49,8 +51,8 @@ const MainNavigation = () => {
                 TV Shows
               </NavLink>
             </li>
-          </ul>
-        </div>
+          </div>
+        </ul>
       </nav>
     </header>
   );

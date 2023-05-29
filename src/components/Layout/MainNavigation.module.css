@@ -1,6 +1,4 @@
 nav {
-  display: flex;
-  justify-content: space-between;
   padding: 0.75rem;
   width: 100%;
   position: absolute;
@@ -11,16 +9,28 @@ nav {
 
 .logo {
   width: 10vw;
-  position: fixed;
+}
+
+.logoAndSearch {
+  display: flex;
+}
+
+.searchBar {
+  padding: 1rem 0 0 10rem;
+}
+
+.navOptions {
+  display: flex;
 }
 
 ul {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
-  padding: 1rem 7rem 0rem 0rem;
 }
 
-li {
+.navOption {
   padding: 0 0 0 10rem;
 }
 
