@@ -21,15 +21,19 @@ const SearchBar = () => {
               input +
               "&page=1&include_adult=true"
           );
-          const resData = await response.json();
-          if (resData.results.length > 10) {
-            resData.results.length = 10;
+          if (!response.ok) {
+            //...
+          } else {
+            const resData = await response.json();
+            if (resData.results.length > 10) {
+              resData.results.length = 10;
+            }
+            setSearchResults(resData.results);
           }
-          setSearchResults(resData.results);
         }
         fetchSearchResults();
       }
-    }, 1000);
+    }, 800);
 
     return () => {
       clearTimeout(identifier);

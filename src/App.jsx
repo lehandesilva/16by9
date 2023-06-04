@@ -78,17 +78,38 @@ Tv Shows
   top rated - https://api.themoviedb.org/3/tv/top_rated?api_key=<<api_key>>&language=en-US&page=1
 
 HOMEPAGE
- Trending
- Popular Movies
- Popular Tv Show
+ {
+  Trending
+
  MOVIES SECTION
- Discover
- Popular
- Top Rated
- Upcomin
+  {
+    Discover
+    Popular
+    Top Rated
+    Upcoming
+  }
+ 
  TV SHOWS
- Discover
- Popular
- Top Rated
- On the Air
+  {
+    Discover
+    Popular
+    Top Rated
+    On the Air
+  }
+}
+
+ Things to add: 
+ - Api requests for all sections of the homepage
+ - Movies and Tv shows page with a filter default would be popular
+ - Trending page
+ - Error Page
+ - Adult filter using redux (Just safe search toggle on nav)
+ - Footer
+ - Search bar css for profile and other information
+ - Error Page
+ - Movie/tvshow/profile details page
+
+ 292
+ 293
+
  */

@@ -1,6 +1,5 @@
 import Card from "../UI/Card";
 import Grid from "../UI/Grid";
-import classes from "./Trending.module.css";
 
 const MOCKDATa = [
   {
