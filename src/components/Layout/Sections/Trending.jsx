@@ -1,5 +1,5 @@
-import Card from "../UI/Card";
-import Grid from "../UI/Grid";
+import Card from "../../UI/Card";
+import Grid from "../../UI/Grid";
 
 const MOCKDATa = [
   {

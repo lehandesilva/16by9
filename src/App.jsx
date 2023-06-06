@@ -8,6 +8,15 @@ import TvshowDetailPage from "./pages/TvshowDetailPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
 import MoviesRootLayout from "./pages/MoviesRootLayout";
 import TvshowsRootLayout from "./pages/TvshowsRootLayout";
+import TrendingPage from "./pages/TrendingPage";
+import DiscoverMovies from "./pages/DiscoverMovies";
+import PopularMovies from "./pages/PopularMovies";
+import TopRatedMovies from "./pages/TopRatedMovies";
+import UpcomingMovies from "./pages/UpcomingMovies";
+import DiscoverTvshows from "./pages/DiscoverTvshows";
+import OnTheAirTvshows from "./pages/OnTheAirTvshows";
+import PopularTvshows from "./pages/PopularTvshows";
+import TopRatedTvshows from "./pages/TopRatedTvshows";
 
 const router = createBrowserRouter([
   {
@@ -19,19 +28,31 @@ const router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: "Movies",
+        path: "trending",
+        element: <TrendingPage />,
+      },
+      {
+        path: "movies",
         element: <MoviesRootLayout />,
         children: [
           { index: true, element: <Movies /> },
-          { path: ":MovieID", element: <MovieDetailPage /> },
+          { path: "discover", element: <DiscoverMovies /> },
+          { path: "popular", element: <PopularMovies /> },
+          { path: "toprated", element: <TopRatedMovies /> },
+          { path: "upcoming", element: <UpcomingMovies /> },
+          { path: ":movieID", element: <MovieDetailPage /> },
         ],
       },
       {
-        path: "Tvshows",
+        path: "tvshows",
         element: <TvshowsRootLayout />,
         children: [
           { index: true, element: <Tvshows /> },
-          { path: ":TvshowID", element: <TvshowDetailPage /> },
+          { path: "discover", element: <DiscoverTvshows /> },
+          { path: "popular", element: <PopularTvshows /> },
+          { path: "toprated", element: <TopRatedTvshows /> },
+          { path: "ontheair", element: <OnTheAirTvshows /> },
+          { path: ":tvshowID", element: <TvshowDetailPage /> },
         ],
       },
     ],
@@ -112,4 +133,5 @@ HOMEPAGE
  292
  293
 
+ Just use loaders for each of the individual pages and use a normal get request for the sections
  */
