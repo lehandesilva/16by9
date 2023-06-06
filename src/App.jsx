@@ -129,6 +129,7 @@ HOMEPAGE
  - Search bar css for profile and other information
  - Error Page
  - Movie/tvshow/profile details page
+ - Media queries
 
  292
  293

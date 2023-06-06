@@ -1,7 +1,3 @@
-import Trending from "../components/Layout/Sections/Trending";
-
-const TrendingPage = () => {
-  return <Trending />;
-};
+const TrendingPage = () => {};
 
 export default TrendingPage;

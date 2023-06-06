@@ -5,7 +5,7 @@ const Homepage = () => {
   return (
     <>
       <Slideshow />
-      {/* <Trending /> */}
+      <Trending />
     </>
   );
 };

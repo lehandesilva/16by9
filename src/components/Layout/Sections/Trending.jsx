@@ -1,5 +1,6 @@
-import Card from "../../UI/Card";
-import Grid from "../../UI/Grid";
+import classes from "./Trending.module.css";
+import MiniGrid from "../../UI/MiniGrid";
+import MiniCard from "../../UI/MiniCard";
 
 const MOCKDATa = [
   {
@@ -223,19 +224,19 @@ const MOCKDATa = [
 const Trending = () => {
   return (
     <>
-      <h1>Trending</h1>
-      <Grid>
+      <h1 className={classes.title}>Trending</h1>
+      <MiniGrid>
         {MOCKDATa.map((item) => (
-          <Card
+          <MiniCard
             key={item.id}
             id={item.id}
             type={item.media_type}
-            imgUrl={item.poster_path}
+            imgPath={item.poster_path}
             name={item.title ? item.title : item.name}
             rating={item.vote_average.toFixed(1)}
           />
         ))}
-      </Grid>
+      </MiniGrid>
     </>
   );
 };
