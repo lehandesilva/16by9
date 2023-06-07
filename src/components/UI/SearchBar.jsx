@@ -17,9 +17,17 @@ const SearchBar = () => {
         input = searchInput.replace(/ /g, "%20");
         async function fetchSearchResults() {
           const response = await fetch(
-            "https://api.themoviedb.org/3/search/multi?api_key=33d282578e6801a5e63a6a43637a9135&language=en-US&query=" +
+            "https://api.themoviedb.org/3/search/multi?query=" +
               input +
-              "&page=1&include_adult=true"
+              "&include_adult=false&language=en-US&page=1",
+            {
+              method: "GET",
+              headers: {
+                accept: "application/json",
+                Authorization:
+                  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NzcwNzQ0N2Q2MjZjZTMzZDA4YjRiMGQwYTIwMWRiMiIsInN1YiI6IjY0MWVmMDQ1YjIzNGI5MDExZGMwNGY2ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6XYD0OdOycoiAKzw3b9Lr4AnEHbAD4CIMUZl-AVbJTw",
+              },
+            }
           );
           if (!response.ok) {
             //...

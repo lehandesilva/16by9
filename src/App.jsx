@@ -8,7 +8,6 @@ import TvshowDetailPage from "./pages/TvshowDetailPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
 import MoviesRootLayout from "./pages/MoviesRootLayout";
 import TvshowsRootLayout from "./pages/TvshowsRootLayout";
-import TrendingPage from "./pages/TrendingPage";
 import DiscoverMovies from "./pages/DiscoverMovies";
 import PopularMovies from "./pages/PopularMovies";
 import TopRatedMovies from "./pages/TopRatedMovies";
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
-      },
-      {
-        path: "trending",
-        element: <TrendingPage />,
       },
       {
         path: "movies",
@@ -65,7 +60,7 @@ function App() {
 
 export default App;
 /*
-api key - 33d282578e6801a5e63a6a43637a9135
+api key - 67707447d626ce33d08b4b0d0a201db2
 
 Images
   base url -https://image.tmdb.org/t/p/
@@ -127,7 +122,6 @@ HOMEPAGE
  - Adult filter using redux (Just safe search toggle on nav)
  - Footer
  - Search bar css for profile and other information
- - Error Page
  - Movie/tvshow/profile details page
  - Media queries
 
