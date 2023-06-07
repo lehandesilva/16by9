@@ -24,8 +24,7 @@ const SearchBar = () => {
               method: "GET",
               headers: {
                 accept: "application/json",
-                Authorization:
-                  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NzcwNzQ0N2Q2MjZjZTMzZDA4YjRiMGQwYTIwMWRiMiIsInN1YiI6IjY0MWVmMDQ1YjIzNGI5MDExZGMwNGY2ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6XYD0OdOycoiAKzw3b9Lr4AnEHbAD4CIMUZl-AVbJTw",
+                Authorization: import.meta.env.VITE_SOME_KEY,
               },
             }
           );
