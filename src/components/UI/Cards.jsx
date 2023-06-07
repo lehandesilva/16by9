@@ -1,35 +1,34 @@
 import { Link } from "react-router-dom";
+import classes from "./Cards.module.css";
 import { AiOutlineStar } from "react-icons/ai";
-import classes from "./MiniCard.module.css";
-
-const MiniCard = (props) => {
-  let { imgPath: img, name: name, rating: rating, id: id } = props;
-
+const Cards = (props) => {
   return (
-    <>
+    <div className={classes.gridContainer}>
       {props.items.map((item) => (
         <div className={classes.Card}>
           <Link
             to={
-              props.type === "movie"
+              item.media_type === "movie"
                 ? `/Movies/${item.id}`
                 : `/Tvshows/${item.id}`
             }
           >
             <img
-              src={"https://image.tmdb.org/t/p/w154" + item.img}
-              className={classes.posterImg}
+              className={classes.poster}
+              src={"https://image.tmdb.org/t/p/w342" + item.poster_path}
             />
-            <p className={classes.name}>{item.name}</p>
+            <p className={classes.name}>
+              {item.title ? item.title : item.name}
+            </p>
             <div className={classes.rating}>
               <AiOutlineStar className={classes.star} />
-              <p className={classes.rate}>{item.rating}</p>
+              <p className={classes.rate}>{item.vote_average.toFixed(1)}</p>
             </div>
           </Link>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
-export default MiniCard;
+export default Cards;
