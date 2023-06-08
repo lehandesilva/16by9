@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
-import Homepage from "./pages/Homepage";
+import Homepage, { loader as trendingLoader } from "./pages/Homepage";
 import Movies from "./pages/Movies";
 import Tvshows from "./pages/Tvshows";
 import TvshowDetailPage from "./pages/TvshowDetailPage";
@@ -25,6 +25,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
+        loader: trendingLoader,
       },
       {
         path: "movies",

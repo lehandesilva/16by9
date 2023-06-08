@@ -52,6 +52,7 @@
   font-size: 8rem;
   font-weight: 100;
   margin: 0;
+  color: white;
 }
 
 .overview {
@@ -70,4 +71,8 @@
 
 .rate {
   padding: 0 0 0 1rem;
+}
+
+.title:hover {
+  color: #c4c4c4;
 }
