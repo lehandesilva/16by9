@@ -19,7 +19,7 @@ const SearchBar = () => {
           const response = await fetch(
             "https://api.themoviedb.org/3/search/multi?query=" +
               input +
-              "&include_adult=false&language=en-US&page=1",
+              "&include_adult=true&language=en-US&page=1",
             {
               method: "GET",
               headers: {

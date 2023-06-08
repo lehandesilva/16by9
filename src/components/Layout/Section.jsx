@@ -5,13 +5,9 @@ import MiniCards from "../UI/MiniCards";
 const Section = (props) => {
   return (
     <>
-      {props.sectionTitle === "Trending" ? (
+      <Link to={props.path}>
         <h1 className={classes.title}>{props.sectionTitle}</h1>
-      ) : (
-        <Link to={props.sectionTitle.toLowerCase()}>
-          <h1 className={classes.title}>{props.sectionTitle}</h1>
-        </Link>
-      )}
+      </Link>
       <MiniCards items={props.data} />
     </>
   );

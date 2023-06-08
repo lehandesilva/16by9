@@ -1,14 +1,28 @@
 import Slideshow from "../components/UI/Slideshow";
-import Trending from "../components/Sections/Trending";
+import TrendingSection from "../components/Sections/TrendingSection";
 import { useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
+import PopularMoviesSection from "../components/Sections/PopularMoviesSection";
+import TopRatedMoviesSection from "../components/Sections/TopRatedMoviesSection";
+import UpcomingMoviesSection from "../components/Sections/UpcomingMoviesSection";
+import PopularTvshowsSection from "../components/Sections/PopularTvshowsSection";
+import TopRatedTvshowsSection from "../components/Sections/TopRatedTvshowsSection";
+import OnTheAirTvshowsSection from "../components/Sections/OnTheAirTvshowsSection";
 
 const Homepage = () => {
   const data = useLoaderData();
-  const results = data.results;
+  const trendingResults = data.results;
+
   return (
     <>
-      <Slideshow data={results} />
-      <Trending results={results} />
+      <Slideshow data={trendingResults} />
+      <TrendingSection results={trendingResults} />
+      <PopularMoviesSection />
+      <TopRatedMoviesSection />
+      <UpcomingMoviesSection />
+      <PopularTvshowsSection />
+      <TopRatedTvshowsSection />
+      <OnTheAirTvshowsSection />
     </>
   );
 };

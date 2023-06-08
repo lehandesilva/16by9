@@ -61,8 +61,6 @@ function App() {
 
 export default App;
 /*
-api key - 67707447d626ce33d08b4b0d0a201db2
-
 Images
   base url -https://image.tmdb.org/t/p/
   image formats - w1280 w342

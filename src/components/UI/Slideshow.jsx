@@ -13,7 +13,7 @@ const Slideshow = (props) => {
         setIndex((prevIndex) =>
           prevIndex === slides.length - 1 ? 0 : prevIndex + 1
         ),
-      15000
+      10000
     );
     return () => {};
   }, [index]);
@@ -45,8 +45,8 @@ const Slideshow = (props) => {
         <Link
           to={
             slides[index].media_type === "movie"
-              ? `/Movies/${slides[index].id}`
-              : `/Tvshows/${slides[index].id}`
+              ? `/movies/${slides[index].id}`
+              : `/tvshows/${slides[index].id}`
           }
         >
           <h1 className={classes.title}>

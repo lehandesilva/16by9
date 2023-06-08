@@ -9,8 +9,8 @@ const Cards = (props) => {
           <Link
             to={
               item.media_type === "movie"
-                ? `/Movies/${item.id}`
-                : `/Tvshows/${item.id}`
+                ? `/movies/${item.id}`
+                : `/tvshows/${item.id}`
             }
           >
             <img
