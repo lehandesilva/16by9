@@ -114,7 +114,7 @@ HOMEPAGE
 }
 
  Things to add: 
- - Api requests for all sections of the homepage
+ (.)(.)- Api requests for all sections of the homepage
  - Movies and Tv shows page with a filter default would be popular
  - Trending page
  - Error Page
