@@ -5,6 +5,7 @@ const PageContent = (props) => {
   return (
     <>
       <h1 className={classes.title}>{props.title}</h1>
+
       <Cards items={props.cardContent} />
     </>
   );
