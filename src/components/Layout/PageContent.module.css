@@ -1,6 +1,48 @@
+.dropdownInactive {
+  background-color: #12123d;
+  padding: 1rem;
+  margin: 7rem 0 2rem 3rem;
+  display: inline-block;
+  border-radius: 13px;
+}
+
 .title {
-  font-size: 2rem;
-  padding: 1rem 3rem;
+  font-size: 1rem;
   color: aliceblue;
-  margin: 5rem 0 0 0;
+  display: inline-block;
+}
+
+.downIcon {
+  font-size: 1.2rem;
+  color: aliceblue;
+  padding: 0.5rem 0 0 0.5rem;
+}
+
+.dropdownActive {
+  position: absolute;
+  background-color: #12123d;
+  left: 3rem;
+  top: 11rem;
+  border-radius: 13px;
+}
+
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.listItem {
+  padding: 0 0 0.3rem 0;
+  font-size: 1rem;
+}
+
+.dropdownInactive:hover {
+  background-color: #272750;
+  cursor: pointer;
+}
+
+.dropdownActive:hover {
+  background-color: #272750;
+  cursor: pointer;
 }

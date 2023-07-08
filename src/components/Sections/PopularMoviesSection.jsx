@@ -32,7 +32,7 @@ const PopularMoviesSection = () => {
   return (
     <>
       <Section
-        path={"movies/popular"}
+        path="movies/popular"
         sectionTitle={"Popular Movies"}
         data={results}
       />

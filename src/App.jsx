@@ -2,8 +2,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
 import Homepage, { loader as trendingLoader } from "./pages/Homepage";
-import Movies from "./pages/Movies";
-import Tvshows from "./pages/Tvshows";
 import TvshowDetailPage from "./pages/TvshowDetailPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
 import MoviesRootLayout from "./pages/MoviesRootLayout";
@@ -12,12 +10,22 @@ import DiscoverMovies from "./pages/DiscoverMovies";
 import PopularMovies, {
   loader as popularMoviesLoader,
 } from "./pages/PopularMovies";
-import TopRatedMovies from "./pages/TopRatedMovies";
-import UpcomingMovies from "./pages/UpcomingMovies";
+import TopRatedMovies, {
+  loader as topRatedMoviesLoader,
+} from "./pages/TopRatedMovies";
+import UpcomingMovies, {
+  loader as upcomingMoviesLoader,
+} from "./pages/UpcomingMovies";
 import DiscoverTvshows from "./pages/DiscoverTvshows";
-import OnTheAirTvshows from "./pages/OnTheAirTvshows";
-import PopularTvshows from "./pages/PopularTvshows";
-import TopRatedTvshows from "./pages/TopRatedTvshows";
+import OnTheAirTvshows, {
+  loader as onTheAirTvShowLoader,
+} from "./pages/OnTheAirTvshows";
+import PopularTvshows, {
+  loader as popularTvShowLoader,
+} from "./pages/PopularTvshows";
+import TopRatedTvshows, {
+  loader as topRatedTvShowLoader,
+} from "./pages/TopRatedTvshows";
 
 const router = createBrowserRouter([
   {
@@ -39,8 +47,16 @@ const router = createBrowserRouter([
             loader: popularMoviesLoader,
           },
           { path: "discover", element: <DiscoverMovies /> },
-          { path: "toprated", element: <TopRatedMovies /> },
-          { path: "upcoming", element: <UpcomingMovies /> },
+          {
+            path: "toprated",
+            element: <TopRatedMovies />,
+            loader: topRatedMoviesLoader,
+          },
+          {
+            path: "upcoming",
+            element: <UpcomingMovies />,
+            loader: upcomingMoviesLoader,
+          },
           { path: ":movieID", element: <MovieDetailPage /> },
         ],
       },
@@ -48,10 +64,22 @@ const router = createBrowserRouter([
         path: "tvshows",
         element: <TvshowsRootLayout />,
         children: [
-          { path: "popular", element: <PopularTvshows /> },
+          {
+            path: "popular",
+            element: <PopularTvshows />,
+            loader: popularTvShowLoader,
+          },
           { path: "discover", element: <DiscoverTvshows /> },
-          { path: "toprated", element: <TopRatedTvshows /> },
-          { path: "ontheair", element: <OnTheAirTvshows /> },
+          {
+            path: "toprated",
+            element: <TopRatedTvshows />,
+            loader: topRatedTvShowLoader,
+          },
+          {
+            path: "ontheair",
+            element: <OnTheAirTvshows />,
+            loader: onTheAirTvShowLoader,
+          },
           { path: ":tvshowID", element: <TvshowDetailPage /> },
         ],
       },
@@ -127,9 +155,6 @@ HOMEPAGE
  - Search bar css for profile and other information
  - Movie/tvshow/profile details page
  - Media queries
-
- 292
- 293
 
  Just use loaders for each of the individual pages and use a normal get request for the sections
  */

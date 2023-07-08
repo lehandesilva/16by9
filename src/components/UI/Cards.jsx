@@ -5,7 +5,7 @@ const Cards = (props) => {
   return (
     <div className={classes.gridContainer}>
       {props.items.map((item) => (
-        <div className={classes.Card}>
+        <div className={classes.Card} key={item.id}>
           <Link
             to={
               item.media_type === "movie"

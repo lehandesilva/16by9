@@ -1,7 +1,6 @@
 import Slideshow from "../components/UI/Slideshow";
 import TrendingSection from "../components/Sections/TrendingSection";
 import { useLoaderData } from "react-router-dom";
-import { useEffect } from "react";
 import PopularMoviesSection from "../components/Sections/PopularMoviesSection";
 import TopRatedMoviesSection from "../components/Sections/TopRatedMoviesSection";
 import UpcomingMoviesSection from "../components/Sections/UpcomingMoviesSection";

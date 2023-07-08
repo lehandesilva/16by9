@@ -5,7 +5,7 @@ const PopularMovies = () => {
   const data = useLoaderData();
   const results = data.results;
 
-  return <PageContent title="Popular Movies" cardContent={results} />;
+  return <PageContent pageId={0} cardContent={results} type="movie" />;
 };
 
 export default PopularMovies;
