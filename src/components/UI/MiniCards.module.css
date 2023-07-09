@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-self: center;
   margin-bottom: 2rem;
-  background-color: #12123d;
+  background-color: #121212;
   border-radius: 2%;
 }
 .posterImg {
@@ -38,6 +38,6 @@
 }
 
 .Card:hover {
-  background-color: #272750;
+  background-color: #242424;
   cursor: pointer;
 }

@@ -6,7 +6,6 @@ import TvshowDetailPage from "./pages/TvshowDetailPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
 import MoviesRootLayout from "./pages/MoviesRootLayout";
 import TvshowsRootLayout from "./pages/TvshowsRootLayout";
-import DiscoverMovies from "./pages/DiscoverMovies";
 import PopularMovies, {
   loader as popularMoviesLoader,
 } from "./pages/PopularMovies";
@@ -16,7 +15,6 @@ import TopRatedMovies, {
 import UpcomingMovies, {
   loader as upcomingMoviesLoader,
 } from "./pages/UpcomingMovies";
-import DiscoverTvshows from "./pages/DiscoverTvshows";
 import OnTheAirTvshows, {
   loader as onTheAirTvShowLoader,
 } from "./pages/OnTheAirTvshows";
@@ -46,7 +44,6 @@ const router = createBrowserRouter([
             element: <PopularMovies />,
             loader: popularMoviesLoader,
           },
-          { path: "discover", element: <DiscoverMovies /> },
           {
             path: "toprated/:page?",
             element: <TopRatedMovies />,
@@ -69,7 +66,6 @@ const router = createBrowserRouter([
             element: <PopularTvshows />,
             loader: popularTvShowLoader,
           },
-          { path: "discover", element: <DiscoverTvshows /> },
           {
             path: "toprated/:page?",
             element: <TopRatedTvshows />,

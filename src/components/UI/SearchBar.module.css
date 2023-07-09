@@ -32,7 +32,7 @@
   height: 3rem;
   padding: 1rem;
   border-radius: 25px;
-  background-color: #1c1c55;
+  background-color: #121212;
   color: aliceblue;
   outline: none;
   border: none;
@@ -44,7 +44,7 @@
 }
 
 .active.searchBox {
-  background-color: #323264;
+  background-color: #242424;
 }
 
 .active.closeBtn {
@@ -64,7 +64,7 @@
   margin: 1rem 0 0 0;
   height: fit-content;
   position: absolute;
-  background-color: #1c1c55;
+  background-color: #121212;
   border-radius: 25px;
 }
 .searchResults {
@@ -78,7 +78,6 @@
   width: 35rem;
   display: flex;
   align-items: center;
-  border-bottom: 0.1rem solid rgba(165, 165, 165, 50);
 }
 
 .searchImg {
@@ -96,5 +95,6 @@
 }
 
 .result:hover {
-  background-color: #323264;
+  background-color: #242424;
+  border-radius: 25px;
 }

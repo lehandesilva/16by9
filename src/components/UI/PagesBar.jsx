@@ -23,6 +23,11 @@ const PageBar = (props) => {
           </div>
         </Link>
       )}
+      {!prevActive && (
+        <div className={classes.prevInactive}>
+          <HiArrowSmLeft className={classes.inactiveArrow} />
+        </div>
+      )}
       <div className={classes.currentContainer}>
         <p className={classes.currentText}>{currentPage}</p>
       </div>

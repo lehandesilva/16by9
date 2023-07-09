@@ -5,7 +5,8 @@
   margin: 0 0 1rem 0;
 }
 
-.previousContainer {
+.previousContainer,
+.prevInactive {
   padding: 0 2rem 0 0;
 }
 
@@ -15,6 +16,11 @@
   font-size: 1.5rem;
 }
 
+.inactiveArrow {
+  color: rgb(78, 78, 78);
+  font-size: 1.5rem;
+  cursor: not-allowed;
+}
 .currentContainer {
   background-color: aliceblue;
   width: 2rem;

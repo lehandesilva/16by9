@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cards from "../UI/Cards";
 import classes from "./PageContent.module.css";
 import { AiOutlineDown } from "react-icons/ai";
@@ -8,6 +8,8 @@ import PageBar from "../UI/PagesBar";
 const PageContent = (props) => {
   const [dropdownState, setDropdownState] = useState(false);
 
+  // useEffect();
+
   let listOfPages;
 
   if (props.type === "movie") {
@@ -15,14 +17,12 @@ const PageContent = (props) => {
       { id: 0, title: "Popular Movies", path: "../popular" },
       { id: 1, title: "Top Rated Movies", path: "../toprated" },
       { id: 2, title: "Upcoming Movies", path: "../upcoming" },
-      { id: 3, title: "Discover Movies", path: "../discover" },
     ];
   } else if (props.type === "tvshow") {
     listOfPages = [
       { id: 0, title: "Popular Tv Shows", path: "../popular" },
       { id: 1, title: "Top Rated Tv Shows", path: "../toprated" },
       { id: 2, title: "On The Air Tv Shows", path: "../ontheair" },
-      { id: 3, title: "Discover Tv Shows", path: "../discover" },
     ];
   }
 

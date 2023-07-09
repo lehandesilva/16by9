@@ -46,11 +46,11 @@ a:active {
 }
 
 nav:hover {
-  background: rgb(4, 4, 26);
+  background: rgb(3, 3, 3);
   background: linear-gradient(
     180deg,
-    rgba(4, 4, 26, 1) 0%,
-    rgba(4, 4, 26, 0.5130427170868348) 63%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(3, 3, 3, 1) 0%,
+    rgba(3, 3, 3, 0.5326505602240896) 60%,
+    rgba(3, 3, 3, 0) 100%
   );
 }
