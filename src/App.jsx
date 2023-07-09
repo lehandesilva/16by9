@@ -42,18 +42,18 @@ const router = createBrowserRouter([
         element: <MoviesRootLayout />,
         children: [
           {
-            path: "popular",
+            path: "popular/:page?",
             element: <PopularMovies />,
             loader: popularMoviesLoader,
           },
           { path: "discover", element: <DiscoverMovies /> },
           {
-            path: "toprated",
+            path: "toprated/:page?",
             element: <TopRatedMovies />,
             loader: topRatedMoviesLoader,
           },
           {
-            path: "upcoming",
+            path: "upcoming/:page?",
             element: <UpcomingMovies />,
             loader: upcomingMoviesLoader,
           },
@@ -65,18 +65,18 @@ const router = createBrowserRouter([
         element: <TvshowsRootLayout />,
         children: [
           {
-            path: "popular",
+            path: "popular/:page?",
             element: <PopularTvshows />,
             loader: popularTvShowLoader,
           },
           { path: "discover", element: <DiscoverTvshows /> },
           {
-            path: "toprated",
+            path: "toprated/:page?",
             element: <TopRatedTvshows />,
             loader: topRatedTvShowLoader,
           },
           {
-            path: "ontheair",
+            path: "ontheair/:page?",
             element: <OnTheAirTvshows />,
             loader: onTheAirTvShowLoader,
           },

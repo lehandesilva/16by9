@@ -1,0 +1,37 @@
+.pagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1rem 0;
+}
+
+.previousContainer {
+  padding: 0 2rem 0 0;
+}
+
+.arrowLeft,
+.arrowRight {
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+.currentContainer {
+  background-color: aliceblue;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentText {
+  font-weight: bold;
+  color: #12123d;
+  font-size: 1.3rem;
+  cursor: default;
+}
+
+.nextContainer {
+  padding: 0 0 0 2rem;
+}

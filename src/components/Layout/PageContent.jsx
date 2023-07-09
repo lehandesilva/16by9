@@ -3,6 +3,7 @@ import { useState } from "react";
 import Cards from "../UI/Cards";
 import classes from "./PageContent.module.css";
 import { AiOutlineDown } from "react-icons/ai";
+import PageBar from "../UI/PagesBar";
 
 const PageContent = (props) => {
   const [dropdownState, setDropdownState] = useState(false);
@@ -54,6 +55,10 @@ const PageContent = (props) => {
         </div>
       )}
       <Cards items={props.cardContent} />
+      <PageBar
+        currentPage={props.pageNum}
+        currentLink={listOfPages[props.pageId].path}
+      />
     </>
   );
 };
