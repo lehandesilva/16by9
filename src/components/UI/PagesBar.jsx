@@ -4,7 +4,7 @@ import classes from "./PagesBar.module.css";
 import { Link } from "react-router-dom";
 
 const PageBar = (props) => {
-  const { currentPage, currentLink } = props;
+  const { currentPage, currentLink, currentGenre } = props;
 
   let prevActive = true;
   let nextPage = currentPage + 1;
@@ -17,7 +17,7 @@ const PageBar = (props) => {
   return (
     <div className={classes.pagesContainer}>
       {prevActive && (
-        <Link to={`${currentLink}/${prevNum}`}>
+        <Link to={`${currentLink}/${prevNum}/${currentGenre}`}>
           <div className={classes.previousContainer}>
             <HiArrowSmLeft className={classes.arrowLeft} />
           </div>
@@ -31,7 +31,7 @@ const PageBar = (props) => {
       <div className={classes.currentContainer}>
         <p className={classes.currentText}>{currentPage}</p>
       </div>
-      <Link to={`${currentLink}/${nextPage}`}>
+      <Link to={`${currentLink}/${nextPage}/${currentGenre}`}>
         <div className={classes.nextContainer}>
           <HiArrowSmRight className={classes.arrowRight} />
         </div>

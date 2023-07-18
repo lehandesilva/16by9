@@ -7,12 +7,14 @@ const PopularTvshows = () => {
   const results = data.results;
 
   let pageNum = params.page;
+  let genre = params.genre;
 
   if (pageNum === undefined) {
     pageNum = 1;
   } else {
     pageNum = parseInt(pageNum);
   }
+  genre = parseInt(genre);
 
   return (
     <PageContent
@@ -20,6 +22,7 @@ const PopularTvshows = () => {
       cardContent={results}
       type="tvshow"
       pageNum={pageNum}
+      currentGenre={genre}
     />
   );
 };
@@ -28,13 +31,17 @@ export default PopularTvshows;
 
 export async function loader({ params }) {
   let pageNum = params.page;
+  let genreNum = params.genre;
 
   if (pageNum === undefined) {
     pageNum = 1;
   }
 
   const response = await fetch(
-    "https://api.themoviedb.org/3/tv/popular?language=en-US&page=" + pageNum,
+    "https://api.themoviedb.org/3/discover/tv?include_adult=false&language=en-US&page=" +
+      pageNum +
+      "&sort_by=popularity.desc&with_genres=" +
+      genreNum,
     {
       method: "GET",
       headers: {

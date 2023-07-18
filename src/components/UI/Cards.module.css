@@ -24,6 +24,7 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   padding: 1rem 0;
+  font-weight: 300;
 }
 
 .rating {
@@ -39,6 +40,7 @@
 .rate {
   padding-left: 0.5rem;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .Card:hover {

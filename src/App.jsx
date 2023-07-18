@@ -4,8 +4,7 @@ import RootLayout from "./pages/Root";
 import Homepage, { loader as trendingLoader } from "./pages/Homepage";
 import TvshowDetailPage from "./pages/TvshowDetailPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
-import MoviesRootLayout from "./pages/MoviesRootLayout";
-import TvshowsRootLayout from "./pages/TvshowsRootLayout";
+import DiscoverRootLayout from "./pages/DiscoverRootLayout";
 import PopularMovies, {
   loader as popularMoviesLoader,
 } from "./pages/PopularMovies";
@@ -24,6 +23,15 @@ import PopularTvshows, {
 import TopRatedTvshows, {
   loader as topRatedTvShowLoader,
 } from "./pages/TopRatedTvshows";
+import TrendingAll, {
+  loader as TrendingAllLoader,
+} from "./pages/TrendingAllPage";
+import TrendingMovies, {
+  loader as TrendingMoviesLoader,
+} from "./pages/TrendingMoviesPage";
+import TrendingTvshows, {
+  loader as TrendingTvshowsLoader,
+} from "./pages/TrendingTvshows";
 
 const router = createBrowserRouter([
   {
@@ -36,16 +44,37 @@ const router = createBrowserRouter([
         loader: trendingLoader,
       },
       {
-        path: "movies",
-        element: <MoviesRootLayout />,
+        path: "trending",
+        element: <DiscoverRootLayout />,
         children: [
           {
-            path: "popular/:page?",
+            path: "all",
+            element: <TrendingAll />,
+            loader: TrendingAllLoader,
+          },
+          {
+            path: "movies",
+            element: <TrendingMovies />,
+            loader: TrendingMoviesLoader,
+          },
+          {
+            path: "tvshows",
+            element: <TrendingTvshows />,
+            loader: TrendingTvshowsLoader,
+          },
+        ],
+      },
+      {
+        path: "movies",
+        element: <DiscoverRootLayout />,
+        children: [
+          {
+            path: "popular/:page?/:genre?",
             element: <PopularMovies />,
             loader: popularMoviesLoader,
           },
           {
-            path: "toprated/:page?",
+            path: "toprated/:page?/:genre?",
             element: <TopRatedMovies />,
             loader: topRatedMoviesLoader,
           },
@@ -59,15 +88,15 @@ const router = createBrowserRouter([
       },
       {
         path: "tvshows",
-        element: <TvshowsRootLayout />,
+        element: <DiscoverRootLayout />,
         children: [
           {
-            path: "popular/:page?",
+            path: "popular/:page?/:genre?",
             element: <PopularTvshows />,
             loader: popularTvShowLoader,
           },
           {
-            path: "toprated/:page?",
+            path: "toprated/:page?/:genre?",
             element: <TopRatedTvshows />,
             loader: topRatedTvShowLoader,
           },
@@ -142,9 +171,9 @@ HOMEPAGE
 }
 
  Things to add: 
- (.)(.)- Api requests for all sections of the homepage
- - Movies and Tv shows page with a filter default would be popular
- - Trending page
+ (.)(.) - Api requests for all sections of the homepage
+ (.)(.) - Movies and Tv shows page with a filter default would be popular
+ (.)(.) - Trending page
  - Error Page
  - Adult filter using redux (Just safe search toggle on nav)
  - Footer

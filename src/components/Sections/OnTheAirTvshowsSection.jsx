@@ -33,6 +33,7 @@ const OnTheAirTvshowsSection = () => {
     <>
       <Section
         path={"tvshows/ontheair"}
+        type="tvshow"
         sectionTitle={"On The Air"}
         data={results}
       />

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import MainNavigation from "../components/Layout/MainNavigation";
 
-const TvshowsRootLayout = () => {
+const DiscoverRootLayout = () => {
   return (
     <>
       <MainNavigation />
@@ -10,4 +10,4 @@ const TvshowsRootLayout = () => {
   );
 };
 
-export default TvshowsRootLayout;
+export default DiscoverRootLayout;

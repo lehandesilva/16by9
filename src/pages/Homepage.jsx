@@ -30,7 +30,7 @@ export default Homepage;
 
 export async function loader() {
   const response = await fetch(
-    "https://api.themoviedb.org/3/trending/all/day?language=en-US",
+    "https://api.themoviedb.org/3/trending/all/week?language=en-US",
     {
       method: "GET",
       headers: {

@@ -3,35 +3,67 @@ import { AiOutlineStar } from "react-icons/ai";
 import classes from "./MiniCards.module.css";
 
 const MiniCard = (props) => {
-  return (
-    <>
-      <div className={classes.gridContainer}>
-        {props.items.map((item) => (
-          <div key={item.id} className={classes.Card}>
-            <Link
-              to={
-                item.media_type === "movie"
-                  ? `/movies/${item.id}`
-                  : `/tvshows/${item.id}`
-              }
-            >
-              <img
-                src={"https://image.tmdb.org/t/p/w154" + item.poster_path}
-                className={classes.posterImg}
-              />
-              <p className={classes.name}>
-                {item.title ? item.title : item.name}
-              </p>
-              <div className={classes.rating}>
-                <AiOutlineStar className={classes.star} />
-                <p className={classes.rate}>{item.vote_average.toFixed(1)}</p>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </>
-  );
+  if (props.type === "trending") {
+    return (
+      <>
+        <div className={classes.gridContainer}>
+          {props.items.map((item) => (
+            <div key={item.id} className={classes.Card}>
+              <Link
+                to={
+                  item.media_type === "movie"
+                    ? `/movies/${item.id}`
+                    : `/tvshows/${item.id}`
+                }
+              >
+                <img
+                  src={"https://image.tmdb.org/t/p/w154" + item.poster_path}
+                  className={classes.posterImg}
+                />
+                <p className={classes.name}>
+                  {item.title ? item.title : item.name}
+                </p>
+                <div className={classes.rating}>
+                  <AiOutlineStar className={classes.star} />
+                  <p className={classes.rate}>{item.vote_average.toFixed(1)}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className={classes.gridContainer}>
+          {props.items.map((item) => (
+            <div key={item.id} className={classes.Card}>
+              <Link
+                to={
+                  props.type === "movie"
+                    ? `/movies/${item.id}`
+                    : `/tvshows/${item.id}`
+                }
+              >
+                <img
+                  src={"https://image.tmdb.org/t/p/w154" + item.poster_path}
+                  className={classes.posterImg}
+                />
+                <p className={classes.name}>
+                  {item.title ? item.title : item.name}
+                </p>
+                <div className={classes.rating}>
+                  <AiOutlineStar className={classes.star} />
+                  <p className={classes.rate}>{item.vote_average.toFixed(1)}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  }
 };
 
 export default MiniCard;

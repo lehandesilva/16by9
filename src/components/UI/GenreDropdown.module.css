@@ -4,55 +4,39 @@
   margin: 1rem 0 2rem 3rem;
   display: inline-block;
   border-radius: 13px;
-  display: inline-block;
 }
-
-.title {
-  margin: 5.5rem 0 0 3rem;
-  font-size: 3rem;
-  font-weight: 300;
-  color: aliceblue;
-  display: block;
-}
-
-.activeTitle {
+.activeGenre {
   font-size: 1rem;
   color: aliceblue;
   display: inline-block;
   font-weight: 500;
 }
-
 .downIcon {
   font-size: 1.2rem;
   color: aliceblue;
   padding: 0.5rem 0 0 0.5rem;
 }
-
 .dropdownActive {
   position: absolute;
   background-color: #121212;
-  left: 3rem;
+  left: 12.8rem;
   top: 14.5rem;
   border-radius: 13px;
 }
-
 .dropdownList {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   align-items: start;
 }
-
 .listItem {
   padding: 0 0 0.3rem 0;
   font-size: 1rem;
 }
-
 .dropdownInactive:hover {
   background-color: #242424;
   cursor: pointer;
 }
-
 .dropdownActive:hover {
   background-color: #242424;
   cursor: pointer;

@@ -10,16 +10,16 @@
 .title {
   margin: 5.5rem 0 0 3rem;
   font-size: 3rem;
-  font-weight: 300;
   color: aliceblue;
   display: block;
+  font-weight: 300;
 }
 
 .activeTitle {
   font-size: 1rem;
   color: aliceblue;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .downIcon {

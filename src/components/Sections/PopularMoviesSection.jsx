@@ -33,6 +33,7 @@ const PopularMoviesSection = () => {
     <>
       <Section
         path="movies/popular"
+        type="movie"
         sectionTitle={"Popular Movies"}
         data={results}
       />
