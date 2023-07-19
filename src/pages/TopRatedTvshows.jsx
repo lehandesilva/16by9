@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { json, useLoaderData, useParams } from "react-router-dom";
 import PageContent from "../components/Layout/PageContent";
 
 const TopRatedTvshows = () => {
@@ -53,7 +53,7 @@ export async function loader({ params }) {
   );
 
   if (!response.ok) {
-    //...
+    return json({ message: "Could not fetch events" }, { status: 500 });
   } else {
     return response;
   }

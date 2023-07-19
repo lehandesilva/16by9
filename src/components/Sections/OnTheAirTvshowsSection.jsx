@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { json } from "react-router-dom";
 import Section from "../Layout/Section";
 
 const OnTheAirTvshowsSection = () => {
@@ -17,7 +18,7 @@ const OnTheAirTvshowsSection = () => {
         }
       );
       if (!response.ok) {
-        //...
+        return json({ message: "Could not fetch events" }, { status: 500 });
       } else {
         const resData = await response.json();
         if (resData.results.length > 16) {

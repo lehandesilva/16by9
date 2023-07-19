@@ -32,11 +32,13 @@ import TrendingMovies, {
 import TrendingTvshows, {
   loader as TrendingTvshowsLoader,
 } from "./pages/TrendingTvshows";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,

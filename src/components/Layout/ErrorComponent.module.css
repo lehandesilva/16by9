@@ -1,0 +1,12 @@
+.title {
+  font-size: 3rem;
+  color: aliceblue;
+  margin: 10rem 0 3rem 5rem;
+  font-weight: 400;
+}
+.message {
+  font-size: 2rem;
+  color: aliceblue;
+  margin: 5rem 0 3rem 5rem;
+  font-weight: 300;
+}

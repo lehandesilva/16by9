@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Section from "../Layout/Section";
+import { json } from "react-router-dom";
 
 const PopularTvshowsSection = () => {
   const [results, setResults] = useState([]);
@@ -17,7 +18,7 @@ const PopularTvshowsSection = () => {
         }
       );
       if (!response.ok) {
-        //...
+        return json({ message: "Could not fetch events" }, { status: 500 });
       } else {
         const resData = await response.json();
         if (resData.results.length > 16) {

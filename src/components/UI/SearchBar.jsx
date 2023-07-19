@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import classes from "./SearchBar.module.css";
 import { BiSearch } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 
 const SearchBar = () => {
   const [searchBtnState, setSearchBtnState] = useState(false);
@@ -29,7 +29,7 @@ const SearchBar = () => {
             }
           );
           if (!response.ok) {
-            //...
+            return json({ message: "Could not fetch events" }, { status: 500 });
           } else {
             const resData = await response.json();
             if (resData.results.length > 10) {

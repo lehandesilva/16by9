@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, json } from "react-router-dom";
 import TrendingPageContent from "../components/Layout/TrendingPageContent";
 
 const TrendingAllPage = () => {
@@ -23,7 +23,7 @@ export async function loader() {
   );
 
   if (!response.ok) {
-    //...
+    return json({ message: "Could not fetch events" }, { status: 500 });
   } else {
     return response;
   }

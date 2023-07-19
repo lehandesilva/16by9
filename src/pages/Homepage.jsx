@@ -1,6 +1,6 @@
 import Slideshow from "../components/UI/Slideshow";
 import TrendingSection from "../components/Sections/TrendingSection";
-import { useLoaderData } from "react-router-dom";
+import { json, useLoaderData } from "react-router-dom";
 import PopularMoviesSection from "../components/Sections/PopularMoviesSection";
 import TopRatedMoviesSection from "../components/Sections/TopRatedMoviesSection";
 import UpcomingMoviesSection from "../components/Sections/UpcomingMoviesSection";
@@ -41,6 +41,7 @@ export async function loader() {
   );
 
   if (!response.ok) {
+    return json({ message: "Could not fetch events" }, { status: 500 });
   } else {
     return response;
   }
