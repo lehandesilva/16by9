@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import ErrorComponent from "../components/Layout/ErrorComponent";
+import ErrorContent from "../components/Layout/ErrorContent";
 import MainNavigation from "../components/Layout/MainNavigation";
 
 const ErrorPage = () => {
@@ -19,7 +19,7 @@ const ErrorPage = () => {
   return (
     <>
       <MainNavigation />
-      <ErrorComponent title={title} message={message} />
+      <ErrorContent title={title} message={message} />
     </>
   );
 };

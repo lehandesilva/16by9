@@ -1,6 +1,6 @@
-import classes from "./ErrorComponent.module.css";
+import classes from "./ErrorContent.module.css";
 
-const ErrorComponent = (props) => {
+const ErrorContent = (props) => {
   return (
     <>
       <h1 className={classes.title}>{props.title}</h1>
@@ -9,4 +9,4 @@ const ErrorComponent = (props) => {
   );
 };
 
-export default ErrorComponent;
+export default ErrorContent;
