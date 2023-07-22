@@ -3,11 +3,13 @@ import classes from "./SearchBar.module.css";
 import { BiSearch } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
 import { json, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const SearchBar = () => {
   const [searchBtnState, setSearchBtnState] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const adultToggle = useSelector((state) => state.filter.adultFilter);
 
   let input = "";
 
@@ -19,7 +21,9 @@ const SearchBar = () => {
           const response = await fetch(
             "https://api.themoviedb.org/3/search/multi?query=" +
               input +
-              "&include_adult=true&language=en-US&page=1",
+              "&include_adult=" +
+              adultToggle +
+              "&language=en-US&page=1",
             {
               method: "GET",
               headers: {

@@ -1,8 +1,9 @@
 import React from "react";
-import { Form, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import logo from "../../assests/white.png";
 import SearchBar from "../UI/SearchBar";
+import AdultFilterToggle from "../UI/AdultFilterToggle";
 
 const MainNavigation = () => {
   return (
@@ -50,6 +51,9 @@ const MainNavigation = () => {
               >
                 TV Shows
               </NavLink>
+            </li>
+            <li className={classes.navOption}>
+              <AdultFilterToggle />
             </li>
           </div>
         </ul>
