@@ -7,19 +7,27 @@ const Footer = () => {
     <div className={classes.container}>
       <p className={classes.text}>
         A project by{" "}
-        <a className={classes.linkText} href="https://github.com/lehandesilva">
+        <a
+          target="_blank"
+          className={classes.linkText}
+          href="https://github.com/lehandesilva"
+        >
           Lehan De Silva.{" "}
         </a>
-        <a href="https://github.com/lehandesilva">
+        <a target="_blank" href="https://github.com/lehandesilva">
           <AiFillGithub className={classes.githubLogo} />
         </a>
       </p>
       <p className={classes.text}>
         Film Data provided by{" "}
-        <a className={classes.linkText} href="https://www.themoviedb.org/">
+        <a
+          target="_blank"
+          className={classes.linkText}
+          href="https://www.themoviedb.org/"
+        >
           TMDB.
         </a>
-        <a href="https://www.themoviedb.org/">
+        <a target="_blank" href="https://www.themoviedb.org/">
           <img src={tmdbLogo} alt="TMDB Logo" className={classes.logo} />
         </a>
       </p>

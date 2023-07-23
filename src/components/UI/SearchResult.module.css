@@ -1,0 +1,32 @@
+.result {
+  height: 10rem;
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.searchImg {
+  justify-self: flex-start;
+  margin-left: 4rem;
+  border-radius: 10px;
+}
+
+.personImg.searchImg {
+  border-radius: 45px;
+}
+
+.searchInfo {
+  padding-left: 2rem;
+}
+
+.resultTitle {
+  color: rgb(207, 207, 207);
+  font-size: 1.3rem;
+}
+
+.result:hover {
+  background-color: #242424;
+  border-radius: 25px;
+  width: 33rem;
+}

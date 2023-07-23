@@ -5,6 +5,7 @@ import Homepage, { loader as trendingLoader } from "./pages/Homepage";
 import TvshowDetailPage from "./pages/TvshowDetailPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
 import DiscoverRootLayout from "./pages/DiscoverRootLayout";
+import PersonDetailPage from "./pages/PersonDetailPage";
 import PopularMovies, {
   loader as popularMoviesLoader,
 } from "./pages/PopularMovies";
@@ -110,6 +111,16 @@ const router = createBrowserRouter([
           { path: ":tvshowID", element: <TvshowDetailPage /> },
         ],
       },
+      {
+        path: "person",
+        element: <DiscoverRootLayout />,
+        children: [
+          {
+            path: ":personID",
+            element: <PersonDetailPage />,
+          },
+        ],
+      },
     ],
   },
 ]);
@@ -178,7 +189,7 @@ HOMEPAGE
  (.)(.) - Trending page
  (.)(.) - Error Page
  (.)(.) - Adult filter using redux (Just safe search toggle on nav)
- - Footer
+ (.)(.) - Footer
  - Search bar css for profile and other information
  - Movie/tvshow/profile details page
  - Media queries

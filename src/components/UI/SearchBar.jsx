@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import classes from "./SearchBar.module.css";
 import { BiSearch } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
-import { json, Link } from "react-router-dom";
+import { json } from "react-router-dom";
 import { useSelector } from "react-redux";
+import SearchResult from "./SearchResult";
 
 const SearchBar = () => {
   const [searchBtnState, setSearchBtnState] = useState(false);
@@ -33,7 +34,10 @@ const SearchBar = () => {
             }
           );
           if (!response.ok) {
-            return json({ message: "Could not fetch events" }, { status: 500 });
+            return json(
+              { message: "Could not fetch results" },
+              { status: 500 }
+            );
           } else {
             const resData = await response.json();
             if (resData.results.length > 10) {
@@ -72,7 +76,7 @@ const SearchBar = () => {
           type="text"
           placeholder={searchBtnState ? "Search..." : ""}
           className={`${classes.searchBox} ${searchBtnState && classes.active}`}
-          onBlur={searchBtnInactiveHandler}
+          onBlur={searchResults.length === 0 && searchBtnInactiveHandler}
           onChange={inputChangeHandler}
           value={searchInput}
         />
@@ -91,27 +95,18 @@ const SearchBar = () => {
           <IoIosClose />
         </button>
       </div>
-      {searchBtnState && (
-        <div className={classes.searchResultsContainer}>
-          <ul className={classes.searchResults}>
-            {searchResults.map((item) => (
-              <li key={item.id}>
-                <Link className={classes.result}>
-                  <img
-                    className={classes.searchImg}
-                    src={"https://image.tmdb.org/t/p/w92" + item.poster_path}
-                  />
-                  <div className={classes.searchInfo}>
-                    <p className={classes.resultTitle}>
-                      {item.title ? item.title : item.name}
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div className={classes.searchResultsContainer}>
+        <ul className={classes.searchResults}>
+          {searchResults.map((item) => (
+            <li key={item.id}>
+              <SearchResult
+                item={item}
+                onClickHandler={searchBtnInactiveHandler}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
