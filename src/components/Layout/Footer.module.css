@@ -1,0 +1,33 @@
+.container {
+  width: 70%;
+  margin: 1rem auto;
+  border-top: 1px solid aliceblue;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.text {
+  color: aliceblue;
+  display: inline;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 1rem;
+}
+.logo {
+  width: 7rem;
+  padding: 0 1rem;
+}
+
+.githubLogo {
+  margin: 0 0.5rem;
+}
+
+.linkText {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.linkText:hover {
+  font-weight: 400;
+  text-decoration: solid underline aliceblue 1px;
+}
