@@ -76,7 +76,7 @@ const SearchBar = () => {
           type="text"
           placeholder={searchBtnState ? "Search..." : ""}
           className={`${classes.searchBox} ${searchBtnState && classes.active}`}
-          onBlur={searchResults.length === 0 && searchBtnInactiveHandler}
+          onBlur={searchResults.length === 0 ? searchBtnInactiveHandler : null}
           onChange={inputChangeHandler}
           value={searchInput}
         />

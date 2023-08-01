@@ -66,7 +66,7 @@ const PeopleDetailContent = (props) => {
   return (
     <>
       <div className={classes.topContainer}>
-        {props.data.poster_path === null ? (
+        {props.data.profile_path === null ? (
           <div className={classes.noPoster}></div>
         ) : (
           <img

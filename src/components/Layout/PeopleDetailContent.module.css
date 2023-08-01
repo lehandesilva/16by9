@@ -52,4 +52,5 @@
 
 .readButtom:hover {
   background-color: #444444;
+  cursor: pointer;
 }
