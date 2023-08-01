@@ -8,7 +8,7 @@ const MiniCard = (props) => {
       <div className={classes.gridContainer}>
         {props.items.map((item) => (
           <Link
-            key={item.id}
+            key={props.credits ? item.credit_id : item.id}
             to={
               item.media_type === "movie" || props.type === "movie"
                 ? `/movies/${item.id}`

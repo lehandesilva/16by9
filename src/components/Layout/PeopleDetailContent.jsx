@@ -103,15 +103,15 @@ const PeopleDetailContent = (props) => {
       <div className={classes.lowerContainer}>
         <div className={classes.section}>
           <h2 className={classes.starringTitles}>Movies Starring</h2>
-          <MiniCard type="movie" items={movieCast} />
+          <MiniCard credits={true} type="movie" items={movieCast} />
           <h2 className={classes.starringTitles}>Movies By</h2>
-          <MiniCard type="movie" items={movieCrew} />
+          <MiniCard credits={true} type="movie" items={movieCrew} />
         </div>
         <div className={classes.section}>
           <h2 className={classes.starringTitles}>Tv Shows Starring</h2>
-          <MiniCard type="tv" items={tvshowCast} />
+          <MiniCard credits={true} type="tv" items={tvshowCast} />
           <h2 className={classes.starringTitles}>Tv Shows By</h2>
-          <MiniCard type="tv" items={tvshowCrew} />
+          <MiniCard credits={true} type="tv" items={tvshowCrew} />
         </div>
       </div>
     </>
