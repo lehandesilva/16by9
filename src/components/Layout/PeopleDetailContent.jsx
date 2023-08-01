@@ -66,10 +66,15 @@ const PeopleDetailContent = (props) => {
   return (
     <>
       <div className={classes.topContainer}>
-        <img
-          className={classes.profilePoster}
-          src={"https://image.tmdb.org/t/p/w342" + props.data.profile_path}
-        />
+        {props.data.poster_path === null ? (
+          <div className={classes.noPoster}></div>
+        ) : (
+          <img
+            className={classes.profilePoster}
+            src={"https://image.tmdb.org/t/p/w342" + props.data.profile_path}
+          />
+        )}
+
         <div className={classes.personInfo}>
           <h1 className={classes.name}>{props.data.name}</h1>
           <p className={classes.bio}>
