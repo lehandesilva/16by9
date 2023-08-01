@@ -55,8 +55,8 @@ const PageContent = (props) => {
         <div className={classes.dropdownActive} onClick={selectClickHandler}>
           <ul className={classes.dropdownList}>
             {otherPages.map((page) => (
-              <Link to={page.path}>
-                <li key={page.id} className={classes.listItem}>
+              <Link key={page.id} to={page.path}>
+                <li className={classes.listItem}>
                   <p>{page.title}</p>
                 </li>
               </Link>

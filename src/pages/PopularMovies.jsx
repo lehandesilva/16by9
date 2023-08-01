@@ -39,7 +39,7 @@ export async function loader({ params }) {
   }
 
   const response = await fetch(
-    "https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=" +
+    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=" +
       pageNum +
       "&sort_by=popularity.desc&with_genres=" +
       genreNum,

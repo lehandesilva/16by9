@@ -1,0 +1,150 @@
+p,
+h1,
+h2 {
+  color: aliceblue;
+}
+.backdropContainer {
+  width: 100%;
+}
+.noBackdrop {
+  width: 100%;
+}
+
+.topContainerWOBackdrop {
+  margin: 10rem 0 0 0;
+  position: static;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.backdrop {
+  width: 100%;
+  filter: brightness(50%);
+}
+.topContainerInfo {
+  position: absolute;
+  top: 47%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+  z-index: 3;
+}
+.posterWithDetailsContainer {
+  display: flex;
+}
+.poster {
+  width: 300px;
+  height: 471px;
+  margin: 0 0 0 6rem;
+}
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 0 0 0 5rem;
+}
+.year {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.title {
+  font-size: 8rem;
+  font-weight: 100;
+  margin: 1rem 0 0 0;
+}
+.directors {
+  display: flex;
+  margin: 1rem 0 0 0;
+}
+.directed {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 1rem 0.7rem 0 0;
+}
+.text {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 1rem 0.7rem 0 0;
+}
+.genres {
+  display: flex;
+  margin: 1rem 0 0 0;
+}
+.genre {
+  margin: 0 2rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.time {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 1rem 0 0 0;
+}
+.rating {
+  padding: 2rem 0 0 0;
+  display: flex;
+  margin: 0 5rem 2rem 0;
+}
+
+.star {
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+.rate {
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.directed:hover {
+  text-decoration: solid underline aliceblue 1px;
+}
+
+.lowerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.overviewSection {
+  margin: 3rem;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  border-radius: 20px;
+}
+.secondaryTitle {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin: 2rem 2rem;
+}
+.overview {
+  margin: 1rem 1rem 3rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.personSection {
+  margin: 3.5rem;
+}
+.person {
+  margin: 0 1.5rem 1rem 0;
+  display: inline-flex;
+  padding: 0.3rem;
+  border-radius: 5px;
+  background-color: #121212;
+}
+.name {
+  display: inline;
+  color: rgb(188, 199, 207);
+  font-size: 1rem;
+}
+
+.lowerRight {
+  border-left: 1px solid rgb(73, 73, 73);
+}
+.person:hover {
+  background-color: #3d3d3d;
+}

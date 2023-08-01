@@ -17,7 +17,11 @@ const PageBar = (props) => {
   return (
     <div className={classes.pagesContainer}>
       {prevActive && (
-        <Link to={`${currentLink}/${prevNum}/${currentGenre}`}>
+        <Link
+          to={`${currentLink}/${prevNum}/${
+            isNaN(currentGenre) ? "" : currentGenre
+          }`}
+        >
           <div className={classes.previousContainer}>
             <HiArrowSmLeft className={classes.arrowLeft} />
           </div>
@@ -31,7 +35,11 @@ const PageBar = (props) => {
       <div className={classes.currentContainer}>
         <p className={classes.currentText}>{currentPage}</p>
       </div>
-      <Link to={`${currentLink}/${nextPage}/${currentGenre}`}>
+      <Link
+        to={`${currentLink}/${nextPage}/${
+          isNaN(currentGenre) ? "" : currentGenre
+        }`}
+      >
         <div className={classes.nextContainer}>
           <HiArrowSmRight className={classes.arrowRight} />
         </div>

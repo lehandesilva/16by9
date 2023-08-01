@@ -41,7 +41,7 @@ const SearchBar = () => {
           } else {
             const resData = await response.json();
             if (resData.results.length > 10) {
-              resData.results.length = 10;
+              resData.results = resData.results.slice(0, 10);
             }
             setSearchResults(resData.results);
           }

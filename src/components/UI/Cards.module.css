@@ -27,6 +27,15 @@
   font-weight: 300;
 }
 
+.noPosterName {
+  color: aliceblue;
+  font-size: 2rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  padding: 1rem 0;
+  font-weight: 100;
+}
+
 .rating {
   color: aliceblue;
   display: flex;

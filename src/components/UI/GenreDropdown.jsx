@@ -78,9 +78,9 @@ const GenreDropdown = (props) => {
         <div className={classes.dropdownActive} onClick={selectClickHandler}>
           <ul className={classes.dropdownList}>
             {genreList.map((genre) => (
-              <Link to={`${props.currentLink}/1/${genre.id}`}>
-                <li key={genre.id} className={classes.listItem}>
-                  <p key={genre.id}>{genre.name}</p>
+              <Link key={genre.id} to={`${props.currentLink}/1/${genre.id}`}>
+                <li className={classes.listItem}>
+                  <p>{genre.name}</p>
                 </li>
               </Link>
             ))}

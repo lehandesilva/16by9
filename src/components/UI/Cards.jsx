@@ -14,11 +14,21 @@ const Cards = (props) => {
                   : `/tvshows/${item.id}`
               }
             >
-              <img
-                className={classes.poster}
-                src={"https://image.tmdb.org/t/p/w342" + item.poster_path}
-              />
-              <p className={classes.name}>
+              {item.poster_path === null ? (
+                <div className={classes.noPoster}></div>
+              ) : (
+                <img
+                  className={classes.poster}
+                  src={"https://image.tmdb.org/t/p/w342" + item.poster_path}
+                />
+              )}
+              <p
+                className={
+                  item.poster_path === null
+                    ? classes.noPosterName
+                    : classes.name
+                }
+              >
                 {item.title ? item.title : item.name}
               </p>
               <div className={classes.rating}>

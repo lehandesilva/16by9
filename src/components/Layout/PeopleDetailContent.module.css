@@ -1,0 +1,55 @@
+.topContainer {
+  margin: 10rem 5rem 3rem 5rem;
+  display: flex;
+}
+.profilePoster {
+  border-radius: 25px;
+  width: 342px;
+  height: 513px;
+}
+.personInfo {
+  margin: 3rem 0 0 5rem;
+  background-color: #121212;
+  padding: 3rem;
+  border-radius: 25px;
+}
+.name {
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 2rem 1rem;
+}
+.bio {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 2rem 0 0 0;
+}
+.text {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.readButtom {
+  margin: 1rem 0 0 2rem;
+  background-color: #363636;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+
+.info {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 1.5rem 0 0 0;
+}
+
+.section {
+  margin: 3rem;
+}
+.starringTitles {
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.readButtom:hover {
+  background-color: #444444;
+}

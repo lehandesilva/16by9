@@ -1,20 +1,24 @@
 .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Card {
-  width: 200px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  margin-bottom: 1rem;
+  margin: 1rem 1rem;
   background-color: #121212;
   border-radius: 2%;
+  height: 360px;
+  width: 210px;
+  justify-content: space-between;
 }
-.posterImg {
-  justify-self: center;
+
+.topContent {
+  width: 154px;
+  align-self: center;
 }
 
 .name {
@@ -22,11 +26,22 @@
   font-size: 1rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  padding: 1rem 0;
+  padding: 0.6rem 0 0 0;
   font-weight: 300;
 }
+
+.noPosterName {
+  color: aliceblue;
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  padding: 0.3rem 0 0 0;
+  font-weight: 100;
+}
+
 .rating {
   color: aliceblue;
+  margin: 0 0 0 0.5rem;
   display: flex;
   align-items: center;
 }

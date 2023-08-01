@@ -21,9 +21,6 @@ const PopularTvshowsSection = () => {
         return json({ message: "Could not fetch events" }, { status: 500 });
       } else {
         const resData = await response.json();
-        if (resData.results.length > 16) {
-          resData.results.length = 16;
-        }
         setResults(resData.results);
       }
     }

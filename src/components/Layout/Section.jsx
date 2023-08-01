@@ -14,11 +14,7 @@ const Section = (props) => {
           </h1>
         </Link>
       </div>
-      <MiniCards
-        items={props.data}
-        type={props.type}
-        sectionTitle={props.sectionTitle}
-      />
+      <MiniCards items={props.data} type={props.type} />
     </>
   );
 };

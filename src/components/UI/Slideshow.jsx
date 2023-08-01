@@ -50,10 +50,20 @@ const Slideshow = (props) => {
           }
         >
           <h1 className={classes.title}>
-            {slides[index].title ? slides[index].title : slides[index].name}
+            {slides[index].title
+              ? slides[index].title.length > 41
+                ? `${slides[index].title.slice(0, 41)}...`
+                : slides[index].title
+              : slides[index].name.length > 41
+              ? `${slides[index].name.slice(0, 41)}...`
+              : slides[index].name}
           </h1>
         </Link>
-        <p className={classes.overview}>{slides[index].overview}</p>
+        <p className={classes.overview}>
+          {slides[index].overview.length > 500
+            ? `${slides[index].overview.slice(0, 500)} ...`
+            : slides[index].overview}
+        </p>
         <p className={classes.genre}></p>
         <p className={classes.genre}></p>
         <p className={classes.genre}></p>
