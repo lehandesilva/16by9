@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import logo from "../../assests/white.png";
 import SearchBar from "../UI/SearchBar";
 import AdultFilterToggle from "../UI/AdultFilterToggle";
+import { IoIosClose, IoMdMenu } from "react-icons/io";
 
 const MainNavigation = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const menuHandler = () => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    } else {
+      setMenuOpen(true);
+    }
+  };
+
   return (
     <header>
       <nav>
-        <ul>
+        <ul className={classes.navBar}>
           <div className={classes.logoAndSearch}>
             <li>
               <NavLink to="/" end>
@@ -20,7 +31,11 @@ const MainNavigation = () => {
               <SearchBar />
             </li>
           </div>
-          <div className={classes.navOptions}>
+          <div
+            className={`${classes.navOptions} ${
+              !menuOpen && classes.navOptionsActive
+            }`}
+          >
             <li className={classes.navOption}>
               <NavLink
                 to="/"
@@ -57,6 +72,13 @@ const MainNavigation = () => {
             </li>
           </div>
         </ul>
+        <div className="hamburgerMenu" onClick={menuHandler}>
+          {menuOpen ? (
+            <IoIosClose className={classes.closeIcon} />
+          ) : (
+            <IoMdMenu className={classes.hamburgerIcon} />
+          )}
+        </div>
       </nav>
     </header>
   );

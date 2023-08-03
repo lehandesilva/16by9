@@ -19,3 +19,33 @@
   background-color: #242424;
   cursor: pointer;
 }
+
+@media all and (max-width: 1300px) {
+  .container {
+    margin: 0.5rem 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .rightArrow {
+    font-size: 2rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .container {
+    margin: 0.5rem 2rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+  }
+
+  .rightArrow {
+    font-size: 1.8rem;
+  }
+}

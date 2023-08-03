@@ -49,7 +49,7 @@
 
 .active.closeBtn {
   z-index: 1;
-  transform: translate(300px, 2px);
+  transform: translate(18rem, 2px);
 }
 
 .searchBtn:hover {
@@ -70,4 +70,74 @@
   display: flex;
   flex-direction: column;
   width: 30rem;
+}
+
+@media all and (max-width: 1300px) {
+  .active.searchBox {
+    width: 20rem;
+  }
+
+  .active.closeBtn {
+    transform: translate(12rem, 2px);
+  }
+
+  .searchResults {
+    width: 20rem;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .active.searchBox {
+    width: 30rem;
+  }
+
+  .active.closeBtn {
+    transform: translate(18rem, 2px);
+  }
+
+  .searchResults {
+    width: 30rem;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .active.searchBox {
+    width: 20rem;
+  }
+
+  .active.closeBtn {
+    transform: translate(12rem, 2px);
+  }
+
+  .searchResults {
+    width: 20rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .active.searchBox {
+    width: 15rem;
+  }
+
+  .active.closeBtn {
+    transform: translate(9rem, 2px);
+  }
+
+  .searchResults {
+    width: 15rem;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .active.searchBox {
+    width: 13rem;
+  }
+
+  .active.closeBtn {
+    transform: translate(7.5rem, 2px);
+  }
+
+  .searchResults {
+    width: 13rem;
+  }
 }

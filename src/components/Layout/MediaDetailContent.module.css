@@ -24,6 +24,7 @@ h2 {
   width: 100%;
   filter: brightness(50%);
 }
+
 .topContainerInfo {
   position: absolute;
   top: 47%;
@@ -39,7 +40,7 @@ h2 {
 }
 .poster {
   width: 300px;
-  height: 471px;
+  height: 450px;
   margin: 0 0 0 6rem;
 }
 .movieDetails {
@@ -147,4 +148,193 @@ h2 {
 }
 .person:hover {
   background-color: #3d3d3d;
+}
+
+@media all and (max-width: 1650px) {
+  .topContainerInfo {
+    top: 40%;
+  }
+  .poster {
+    width: 250px;
+    height: 375px;
+  }
+  .movieDetails {
+    margin: 0 0 0 3rem;
+  }
+  .year {
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .directed {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 1.5rem;
+  }
+  .genre {
+    font-size: 1.2rem;
+  }
+  .time {
+    font-size: 1.2rem;
+  }
+  .rate {
+    font-size: 1.2rem;
+  }
+}
+
+@media all and (max-width: 1450px) {
+  .topContainerInfo {
+    top: 30%;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  .topContainerInfo {
+    top: 20%;
+  }
+  .overviewSection {
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+  }
+  .secondaryTitle {
+    font-size: 1.3rem;
+  }
+  .overview {
+    margin: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .topContainerInfo {
+    top: 15%;
+  }
+  .poster {
+    width: 200px;
+    height: 300px;
+    margin: 0 0 0 3rem;
+  }
+  .movieDetails {
+    margin: 0 0 0 2rem;
+  }
+  .year {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .directed {
+    font-size: 1.2rem;
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .genre {
+    font-size: 1rem;
+  }
+  .time {
+    font-size: 1rem;
+  }
+  .rate {
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .topContainerInfo {
+    top: 10%;
+    display: block;
+  }
+  .rating {
+    padding: 0;
+    margin: 0.8rem 0 0 17.5rem;
+  }
+  .directors {
+    margin: 0.5rem 0 0 0;
+  }
+  .directed {
+    margin: 0.5rem 0.7rem 0 0;
+  }
+  .text {
+    margin: 0.5rem 0.7rem 0 0;
+  }
+  .genres {
+    margin: 0.5rem 0 0 0;
+  }
+  .time {
+    margin: 0.5rem 0 0 0;
+  }
+  .lowerContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .backdrop {
+    display: none;
+  }
+  .topContainerInfo {
+    position: static;
+    margin: 6rem 0 0 0;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .poster {
+    width: 100px;
+    height: 150px;
+  }
+  .year {
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .directed {
+    font-size: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .genre {
+    font-size: 0.7rem;
+  }
+  .time {
+    font-size: 0.7rem;
+  }
+  .rate {
+    font-size: 0.7rem;
+  }
+  .rating {
+    margin: 0.8rem 0 0 11rem;
+  }
+  .star {
+    font-size: 0.8rem;
+  }
+  .topContainerWOBackdrop {
+    margin: 6rem 0 0 0;
+    display: block;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .posterWithDetailsContainer {
+    display: block;
+  }
+  .poster {
+    width: 200px;
+    height: 300px;
+  }
+  .movieDetails {
+    margin: 1rem 0 0 2.5rem;
+  }
+  .rating {
+    margin: 0.8rem 0 0 2.5rem;
+  }
 }

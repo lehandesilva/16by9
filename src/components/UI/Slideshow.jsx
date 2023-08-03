@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import classes from "./Slideshow.module.css";
 import { AiOutlineStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -27,11 +27,18 @@ const Slideshow = (props) => {
         >
           <div className={classes.slide}>
             {slides.map((item) => (
-              <img
-                key={item.id}
-                className={classes.heroImg}
-                src={"https://image.tmdb.org/t/p/original" + item.backdrop_path}
-              />
+              <Fragment key={item.id}>
+                <img
+                  className={classes.heroImg}
+                  src={
+                    "https://image.tmdb.org/t/p/original" + item.backdrop_path
+                  }
+                />
+                <img
+                  className={classes.poster}
+                  src={"https://image.tmdb.org/t/p/original" + item.poster_path}
+                />
+              </Fragment>
             ))}
           </div>
         </div>

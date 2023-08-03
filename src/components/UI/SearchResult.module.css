@@ -13,7 +13,7 @@
 }
 
 .personImg.searchImg {
-  border-radius: 45px;
+  border-radius: 50%;
 }
 
 .searchInfo {
@@ -29,4 +29,73 @@
   background-color: #242424;
   border-radius: 25px;
   width: 33rem;
+}
+
+@media all and (max-width: 1300px) {
+  .result {
+    height: 10rem;
+    width: 20rem;
+  }
+
+  .result:hover {
+    width: 23rem;
+  }
+}
+@media all and (max-width: 1100px) {
+  .result {
+    height: 10rem;
+    width: 30rem;
+  }
+
+  .result:hover {
+    width: 33rem;
+  }
+}
+@media all and (max-width: 850px) {
+  .result {
+    height: 10rem;
+    width: 20rem;
+  }
+
+  .result:hover {
+    width: 23rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .result {
+    height: 8rem;
+    width: 15rem;
+  }
+
+  .searchImg {
+    width: 30%;
+    margin-left: 0.5rem;
+  }
+
+  .resultTitle {
+    font-size: 1rem;
+  }
+
+  .result:hover {
+    width: 18rem;
+  }
+}
+@media all and (max-width: 400px) {
+  .result {
+    height: 8rem;
+    width: 13rem;
+  }
+
+  .searchImg {
+    width: 35%;
+    margin-left: 0.5rem;
+  }
+
+  .resultTitle {
+    font-size: 1rem;
+  }
+
+  .result:hover {
+    width: 16rem;
+  }
 }

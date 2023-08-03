@@ -147,15 +147,20 @@ const MediaDetailContent = (props) => {
                       4
                     )} - ${props.data.last_air_date.slice(0, 4)}`}
               </p>
-              <h1 className={classes.title}>
-                {props.data.title
-                  ? props.data.title.length > 35
-                    ? `${props.data.title.slice(0, 35)}... `
-                    : props.data.title
-                  : props.data.name.length > 35
-                  ? `${props.data.name.slice(0, 35)}...`
-                  : props.data.name}
-              </h1>
+              {props.data.title !== undefined ||
+              props.data.name !== undefined ? (
+                <h1 className={classes.title}>
+                  {props.data.title
+                    ? props.data.title.length > 35
+                      ? `${props.data.title.slice(0, 35)}... `
+                      : props.data.title
+                    : props.data.name.length > 35
+                    ? `${props.data.name.slice(0, 35)}...`
+                    : props.data.name}
+                </h1>
+              ) : (
+                ""
+              )}
               <div className={classes.directors}>
                 <p className={classes.text}>
                   {props.type === "movie" ? "Directed by" : "Created by"}

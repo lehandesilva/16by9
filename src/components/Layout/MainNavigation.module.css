@@ -5,6 +5,8 @@ nav {
   top: 0;
   left: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -13,10 +15,11 @@ nav {
 
 .logoAndSearch {
   display: flex;
+  align-items: center;
 }
 
 .searchBar {
-  padding: 1rem 0 0 10rem;
+  margin: 0 0 0 3rem;
 }
 
 .navOptions {
@@ -28,10 +31,23 @@ ul {
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  list-style: none;
 }
 
 .navOption {
-  padding: 0 0 0 10rem;
+  margin: 0 0 0 10rem;
+}
+
+.hamburgerIcon {
+  display: none;
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+.closeIcon {
+  display: none;
+  color: aliceblue;
+  font-size: 2rem;
 }
 
 a {
@@ -53,4 +69,53 @@ nav:hover {
     rgba(3, 3, 3, 0.5326505602240896) 60%,
     rgba(3, 3, 3, 0) 100%
   );
+}
+
+@media all and (max-width: 1500px) {
+  .navOption {
+    margin: 0 0 0 5rem;
+  }
+
+  .searchBar {
+    margin: 1rem 0 0 5rem;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .hamburgerIcon {
+    display: block;
+    color: aliceblue;
+    z-index: 10;
+  }
+
+  .closeIcon {
+    display: block;
+    color: aliceblue;
+  }
+
+  .navOptions {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60%;
+    right: 0%;
+    background-color: #030303;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .navOptionsActive {
+    display: none;
+  }
+
+  .navOption {
+    margin: 0.5rem 1rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .searchBar {
+    margin: 0 0 0 1rem;
+  }
 }

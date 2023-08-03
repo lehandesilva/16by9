@@ -154,7 +154,7 @@ export default App;
  (.)(.) - Adult filter using redux (Just safe search toggle on nav)
  (.)(.) - Footer
  (.)(.)- Search bar css for profile and other information
- - Movie/tvshow/profile details page
- - Media queries
+ (.)(.)- Movie/tvshow/profile details page
+ (.)(.) - Media queries
 
  */

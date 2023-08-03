@@ -1,5 +1,4 @@
 .slideshow {
-  margin: 0 auto;
   overflow: hidden;
   width: 100%;
 }
@@ -15,31 +14,22 @@
   display: inline-block;
 }
 
-.slideshowDots {
-  text-align: center;
-}
-.slideshowDot {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 15px 7px 0px;
-  background-color: #c4c4c4;
-}
-
 .heroImg {
   width: 100%;
+  display: inline-block;
   filter: brightness(70%);
-  margin: 0 auto;
+}
+
+.poster {
+  display: none;
+  filter: brightness(70%);
 }
 
 .movieInfo {
   color: aliceblue;
   top: 40%;
   z-index: 3;
-  width: 75%;
-  padding: 0 0 0 7rem;
+  margin: 0 5rem 0.5rem 7rem;
   position: absolute;
   overflow: hidden;
 }
@@ -75,4 +65,75 @@
 
 .title:hover {
   color: #c4c4c4;
+}
+
+@media all and (max-width: 1500px) {
+  .movieInfo {
+    top: 25%;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .overview {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 1300px) {
+  .title {
+    font-size: 3rem;
+  }
+  .movieInfo {
+    top: 30%;
+    margin: 0 3rem 0.5rem 3rem;
+  }
+  .year {
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .movieInfo {
+    top: 40%;
+    margin: 0 3rem 0.5rem 3rem;
+  }
+}
+@media all and (max-width: 900px) {
+  .movieInfo {
+    top: 20%;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .year {
+    font-size: 0.8rem;
+  }
+  .rating {
+    padding: 1rem 0 0 0;
+  }
+  .rate {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .heroImg {
+    display: none;
+  }
+
+  .poster {
+    display: inline-block;
+    width: 100%;
+  }
+  .movieInfo {
+    top: 35%;
+    margin: 0 3rem 0.5rem 2rem;
+  }
+  .overview {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width: 390px) {
+  .movieInfo {
+    top: 25%;
+  }
 }

@@ -10,16 +10,16 @@
 .title {
   margin: 5.5rem 0 0 3rem;
   font-size: 3rem;
+  font-weight: 300;
   color: aliceblue;
   display: block;
-  font-weight: 300;
 }
 
 .activeTitle {
   font-size: 1rem;
   color: aliceblue;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .downIcon {
@@ -41,6 +41,7 @@
   flex-direction: column;
   padding: 1rem;
   align-items: start;
+  font-weight: 300;
 }
 
 .listItem {
@@ -56,4 +57,45 @@
 .dropdownActive:hover {
   background-color: #242424;
   cursor: pointer;
+}
+
+@media all and (max-width: 1000px) {
+  .title {
+    margin: 5.5rem 0 0 3rem;
+    font-size: 2rem;
+  }
+  .dropdownInactive {
+    padding: 0.7rem;
+    margin: 1rem 2rem;
+  }
+
+  .dropdownActive {
+    left: 2rem;
+    top: 13rem;
+  }
+
+  .dropdownList {
+    padding: 0.7rem;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .title {
+    margin: 4rem 0 0 2rem;
+    font-size: 1.5rem;
+  }
+  .dropdownInactive {
+    padding: 0.5rem;
+    margin: 1rem 2rem;
+  }
+
+  .downIcon {
+    font-size: 1.2rem;
+    padding: 0.5rem 0 0 0.5rem;
+  }
+
+  .dropdownActive {
+    left: 1.8rem;
+    top: 10.5rem;
+  }
 }
