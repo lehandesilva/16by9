@@ -145,16 +145,3 @@ function App() {
 }
 
 export default App;
-/*
- Things to add: 
- (.)(.) - Api requests for all sections of the homepage
- (.)(.) - Movies and Tv shows page with a filter default would be popular
- (.)(.) - Trending page
- (.)(.) - Error Page
- (.)(.) - Adult filter using redux (Just safe search toggle on nav)
- (.)(.) - Footer
- (.)(.)- Search bar css for profile and other information
- (.)(.)- Movie/tvshow/profile details page
- (.)(.) - Media queries
-
- */
