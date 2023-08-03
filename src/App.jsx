@@ -1,44 +1,21 @@
+import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
 import Homepage, { loader as trendingLoader } from "./pages/Homepage";
 import DiscoverRootLayout from "./pages/DiscoverRootLayout";
-import MovieDetailPage, {
-  loader as MovieDetailLoader,
-} from "./pages/MovieDetailPage";
-import TvshowDetailPage, {
-  loader as TvshowDetailLoader,
-} from "./pages/TvshowDetailPage";
-import PersonDetailPage, {
-  loader as personDetailLoader,
-} from "./pages/PersonDetailPage";
-import PopularMovies, {
-  loader as popularMoviesLoader,
-} from "./pages/PopularMovies";
-import TopRatedMovies, {
-  loader as topRatedMoviesLoader,
-} from "./pages/TopRatedMovies";
-import UpcomingMovies, {
-  loader as upcomingMoviesLoader,
-} from "./pages/UpcomingMovies";
-import OnTheAirTvshows, {
-  loader as onTheAirTvShowLoader,
-} from "./pages/OnTheAirTvshows";
-import PopularTvshows, {
-  loader as popularTvShowLoader,
-} from "./pages/PopularTvshows";
-import TopRatedTvshows, {
-  loader as topRatedTvShowLoader,
-} from "./pages/TopRatedTvshows";
-import TrendingAll, {
-  loader as TrendingAllLoader,
-} from "./pages/TrendingAllPage";
-import TrendingMovies, {
-  loader as TrendingMoviesLoader,
-} from "./pages/TrendingMoviesPage";
-import TrendingTvshows, {
-  loader as TrendingTvshowsLoader,
-} from "./pages/TrendingTvshows";
+const MovieDetailPage = lazy(() => import("./pages/MovieDetailPage"));
+const TvshowDetailPage = lazy(() => import("./pages/TvshowDetailPage"));
+const PersonDetailPage = lazy(() => import("./pages/PersonDetailPage"));
+const PopularMovies = lazy(() => import("./pages/PopularMovies"));
+const TopRatedMovies = lazy(() => import("./pages/TopRatedMovies"));
+const UpcomingMovies = lazy(() => import("./pages/UpcomingMovies"));
+const OnTheAirTvshows = lazy(() => import("./pages/OnTheAirTvshows"));
+const PopularTvshows = lazy(() => import("./pages/PopularTvshows"));
+const TopRatedTvshows = lazy(() => import("./pages/TopRatedTvshows"));
+const TrendingAll = lazy(() => import("./pages/TrendingAllPage"));
+const TrendingMovies = lazy(() => import("./pages/TrendingMoviesPage"));
+const TrendingTvshows = lazy(() => import("./pages/TrendingTvshows"));
 import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
@@ -58,18 +35,39 @@ const router = createBrowserRouter([
         children: [
           {
             path: "all",
-            element: <TrendingAll />,
-            loader: TrendingAllLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <TrendingAll />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/TrendingAllPage").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: "movies",
-            element: <TrendingMovies />,
-            loader: TrendingMoviesLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <TrendingMovies />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/TrendingMoviesPage").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: "tvshows",
-            element: <TrendingTvshows />,
-            loader: TrendingTvshowsLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <TrendingTvshows />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/TrendingTvshows").then((module) =>
+                module.loader(meta)
+              ),
           },
         ],
       },
@@ -79,23 +77,51 @@ const router = createBrowserRouter([
         children: [
           {
             path: "popular/:page?/:genre?",
-            element: <PopularMovies />,
-            loader: popularMoviesLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <PopularMovies />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/PopularMovies").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: "toprated/:page?/:genre?",
-            element: <TopRatedMovies />,
-            loader: topRatedMoviesLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <TopRatedMovies />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/TopRatedMovies").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: "upcoming/:page?",
-            element: <UpcomingMovies />,
-            loader: upcomingMoviesLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <UpcomingMovies />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/UpcomingMovies").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: ":movieID",
-            element: <MovieDetailPage />,
-            loader: MovieDetailLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <MovieDetailPage />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/MovieDetailPage").then((module) =>
+                module.loader(meta)
+              ),
           },
         ],
       },
@@ -105,23 +131,51 @@ const router = createBrowserRouter([
         children: [
           {
             path: "popular/:page?/:genre?",
-            element: <PopularTvshows />,
-            loader: popularTvShowLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <PopularTvshows />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/PopularTvshows").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: "toprated/:page?/:genre?",
-            element: <TopRatedTvshows />,
-            loader: topRatedTvShowLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <TopRatedTvshows />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/TopRatedTvshows").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: "ontheair/:page?",
-            element: <OnTheAirTvshows />,
-            loader: onTheAirTvShowLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <OnTheAirTvshows />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/OnTheAirTvshows").then((module) =>
+                module.loader(meta)
+              ),
           },
           {
             path: ":tvshowID",
-            element: <TvshowDetailPage />,
-            loader: TvshowDetailLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <TvshowDetailPage />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/TvshowDetailPage").then((module) =>
+                module.loader(meta)
+              ),
           },
         ],
       },
@@ -131,8 +185,15 @@ const router = createBrowserRouter([
         children: [
           {
             path: ":personID",
-            element: <PersonDetailPage />,
-            loader: personDetailLoader,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <PersonDetailPage />
+              </Suspense>
+            ),
+            loader: (meta) =>
+              import("./pages/PersonDetailPage").then((module) =>
+                module.loader(meta)
+              ),
           },
         ],
       },
