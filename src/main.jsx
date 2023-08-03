@@ -5,6 +5,9 @@ import App from "./App";
 
 import { Provider } from "react-redux";
 import store from "./store/index";
+import { inject } from "@vercel/analytics";
+
+inject();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
