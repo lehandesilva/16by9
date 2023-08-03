@@ -41,10 +41,13 @@ const MiniCard = (props) => {
                     : item.name}
                 </p>
               </div>
-              <div className={classes.rating}>
-                <AiOutlineStar className={classes.star} />
-                <p className={classes.rate}>{item.vote_average.toFixed(1)}</p>
-              </div>
+
+              {item.vote_average && (
+                <div className={classes.rating}>
+                  <AiOutlineStar className={classes.star} />
+                  <p className={classes.rate}>{item.vote_average.toFixed(1)}</p>
+                </div>
+              )}
             </div>
           </Link>
         ))}
