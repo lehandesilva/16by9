@@ -1,6 +1,6 @@
 # 16by9
 
-[https](https://16by9.vercel.app/)
+[16by9 site](https://16by9.vercel.app/)
 
 Overview
 16by9 is a frontend website developed using React, designed to provide users with an immersive experience exploring information about movies, TV shows, and people in the entertainment industry. 
