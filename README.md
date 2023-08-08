@@ -7,7 +7,8 @@ Overview
 The website leverages data from The Movie Database (TMDB) API to fetch comprehensive details about various media content. With an intuitive UI, clear routing using React Router, and a global state 
 managed by Redux for the adult filter, 16by9 delivers a seamless and personalized interface for movie enthusiasts and curious viewers alike.
 
-Features
+Features: 
+
 Movie and TV Show Information: Users can dive into the world of their favorite movies and TV shows, accessing summaries, ratings, release dates, genres, and more.
 
 Actor and Crew Details: Get insights into the profiles of actors, directors, and other crew members associated with beloved films and shows.
