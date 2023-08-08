@@ -23,9 +23,15 @@ Responsive Design: The website is fully responsive and adapts smoothly to variou
 
 Clear Routing: React Router ensures smooth navigation and seamless transitions throughout the website.
 
-Technologies Used
+Technologies Used:
+
 React
+
 React Router
+
 Redux
+
 CSS Modules
+
 TMDB API
+
